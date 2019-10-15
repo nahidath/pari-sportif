@@ -20,7 +20,6 @@
 #bouton{
    	width : 240px;
     padding : 5px;
-    display: block;
     position: absolute;
     right: 10px;
     top: 20px;
@@ -103,31 +102,44 @@ label {
 }
 
 
+
+
 .contenu_principal{
 	width: 70%;
 	height: 1000px; 
-	background-color: silver;
-    color: white;
+	background-color: white;
+    color: black;
     font-style: normal;
 	font-size: 20px;
 	padding: 10px;
-    
+	margin-top:10%;    
 	
 }
 
-/*
-.contenu_principal.actu_une{
-	background-color: blue;
-	width: 100%;
-	height: 310px;
-	padding: 10px;
+.image_hover{
+  position: absolute;
+  z-index:10;
+   overflow:hidden;
+  -webkit-border-radius:50px;
+  -moz-border-radius:50px;
+  border-radius:50px;
+  
 }
 
-.contenu_principal.actu_gen{
-	background-color: red;
-	width: 400px;
-	height: 310px;
-	padding: 10px;
-	
+.image_hover:hover{
+  z-index:8;
+  opacity: 0.9;
 }
-*/
+
+.texte_hover{
+  position: fixed;
+  padding:3px 5px;
+  z-index: 9;
+  color: white;
+}
+
+#img2{
+  margin-top:70%;
+}
+
+
