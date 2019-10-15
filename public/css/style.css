@@ -85,11 +85,11 @@ li {
     color: black;
   }
 
-  form.form-inscription {
+  form.form-inscription, form.form-connexion {
     display: table;
 }
 
-div.form-inscription {
+div.form-inscription, div.form-connexion {
     display: table-row;
 }
 
