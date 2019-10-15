@@ -2,6 +2,11 @@
     width: 100%;
     background-color: rgb(91, 152, 223);
     color: white;
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    
 }
 
 #logo{
@@ -9,19 +14,18 @@
     width : 200px;
     padding : 20px;
     font-size: 20px;
+    align-self: center;
+ 
 }
 
 #bouton{
-   	float: right
-    width : 200px;
-    padding : 20px;
-    font-size: 20px;
-}
-
-.inscription{
-}
-.connexion{
-}
+   	width : 240px;
+    padding : 5px;
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+ }
 
 ul {
     list-style-type: none;
