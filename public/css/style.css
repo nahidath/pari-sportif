@@ -9,15 +9,18 @@
     width : 200px;
     padding : 20px;
     font-size: 20px;
-   
-   
+}
+
+#bouton{
+   	float: right
+    width : 200px;
+    padding : 20px;
+    font-size: 20px;
 }
 
 .inscription{
-   float: right;
 }
 .connexion{
-    float: right;   
 }
 
 ul {
