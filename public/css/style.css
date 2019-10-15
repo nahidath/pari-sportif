@@ -84,3 +84,21 @@ li {
     background-color: whitesmoke;
     color: black;
   }
+
+  form.form-inscription {
+    display: table;
+}
+
+div.form-inscription {
+    display: table-row;
+}
+
+label, input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-right: 10px;
+}
+
