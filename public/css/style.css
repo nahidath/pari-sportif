@@ -120,26 +120,30 @@ label {
   position: absolute;
   z-index:10;
    overflow:hidden;
-  -webkit-border-radius:50px;
-  -moz-border-radius:50px;
-  border-radius:50px;
+  -webkit-border-radius:1000px;
+  -moz-border-radius:1000px;
+  border-radius:1000px;
   
 }
 
 .image_hover:hover{
   z-index:8;
-  opacity: 0.9;
+  opacity: 0.5;
 }
 
 .texte_hover{
-  position: fixed;
+
+  position: relative;
+  top: 120px; left: 40px;
   padding:3px 5px;
   z-index: 9;
-  color: white;
+  color: black;
 }
+
 
 #img2{
   margin-top:70%;
+  
 }
 
 
