@@ -12,7 +12,7 @@ app.engine('hbs', hbs({
 app.set('view engine', 'hbs');
 
 app.get('/*', function (req, res) {
-  res.sendStatus(404);
+  res.sendStatus("404");
 })
 
 app.listen(3000, function () {

@@ -5,16 +5,19 @@
 }
 
 #logo{
-    margin: 0px 650px 0px 650px;
+    margin: 0 auto;
+    width : 200px;
+    padding : 20px;
     font-size: 20px;
+   
    
 }
 
-.ligne_haut.inscription{
+.inscription{
    float: right;
 }
-.ligne_haut.connexion{
-    float: right;    
+.connexion{
+    float: right;   
 }
 
 ul {
