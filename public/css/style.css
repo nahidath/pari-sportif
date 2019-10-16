@@ -123,16 +123,15 @@ li {
 }
 
 .image_hover:hover{
-
   opacity: 0.5;
 }
 
-#txt1{
-	
+.texte_hover{
+	margin-top: -250px;
 }
 
-#txt2{
-
+#img2{
+	margin-top: 300px;
 }
 
 
