@@ -119,19 +119,22 @@ li {
 .image_hover img{
   overflow : hidden;
   border-radius:1000px;
+  transform: scale(1);
   
 }
 
 .image_hover:hover{
   opacity: 0.5;
+  transform: scale(0.8);
 }
 
 .texte_hover{
 	margin-top: -250px;
+	display: none
 }
 
 #img2{
-	margin-top: 300px;
+	margin-top: 150px;
 }
 
 
