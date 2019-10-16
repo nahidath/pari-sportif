@@ -11,6 +11,12 @@ app.engine('hbs', hbs({
 }));
 app.set('view engine', 'hbs');
 
+app.get('/contenu', function(req,res){
+	console.log(req.headers['user-agent']);	
+ 	res.sendFile(__dirname+'/public/apparence.html');
+})
+
+
 app.get('/*', function (req, res) {
   res.sendStatus("404");
 })
