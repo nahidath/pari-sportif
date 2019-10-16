@@ -2,44 +2,64 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style_inscription.css">
     </head>
     <body>
-        <form action="inscription" method="get" class="form-inscription">
-            <div class="form-inscription">
-                <label for="nom">
-                    Nom: 
-                </label>
-                <input type="text" name="nom" id ="nom" required>
+        <div class="ligne_haut">
+            <div id="img_logo">
+                <img src="logo_pari.jpg" height="100" width="100"/>
             </div>
-            <div class="form-inscription">
-                <label for="prenom">
-                    Prénom: 
-                </label>
-                <input type="text" name="prenom" id="prenom" required>
+            <div id="logo">
+                <strong>BeToWin</strong>
+                <br> 
+                 <i>If you bet, you win</i>
             </div>
-            <div class="form-inscription">
-                <label for="adresse mail">
-                     Adresse mail:
-                </label>
-                <input type="text" name="adresse mail" id="adresse mail" required>
-            </div>
-            <div class="form-inscription">
-                <label for="mdp">
-                    Mot de passe:
-                </label>
-                <input type="password" name="mdp" id="mdp" required>
-            </div>
-            <div class="form-inscription">
-                <label for="cmdp">
-                    Confirmmer votre mot de passe:
-                </label>
-                <input type="password" name="cmdp" id="cmdp" required>
-            </div>
-            <div class="form-inscription">
-                <input type="submit" value="Valider !">
-            </div>
-            
-        </form>
+        <div class="inscription">
+            <b class="titre">Inscription</b>
+            <form action="inscription" method="get" class="form-inscription">
+                <div class="form-inscription">
+                    <label for="nom">
+                        Nom: 
+                    </label>
+                    <input type="text" name="nom" id ="nom" required>
+                </div>
+                <div class="form-inscription">
+                    <label for="prenom">
+                        Prénom: 
+                    </label>
+                    <input type="text" name="prenom" id="prenom" required>
+                </div>
+                <div class="form-inscription">
+                    <label for="adresse mail">
+                        Adresse mail:
+                    </label>
+                    <input type="text" name="adresse mail" id="adresse mail" required>
+                </div>
+                <div class="form-inscription">
+                    <label for="mdp">
+                        Mot de passe:
+                    </label>
+                    <input type="password" name="mdp" id="mdp" required>
+                </div>
+                <div class="form-inscription">
+                    <label for="cmdp">
+                        Confirmer votre mot de passe:
+                    </label>
+                    <input type="password" name="cmdp" id="cmdp" required>
+                </div>
+                <div class="form-inscription">
+                    <label for="gender">
+                        Vous êtes : <br>
+                        <input type="radio" name="gender" value="homme" checked> Un Homme<br>
+                        <input type="radio" name="gender" value="femme">Une Femme<br>
+                    </label> 
+                </div>
+                <div class="form-inscription">
+                    <input type="submit" value="Valider !">
+                </div>
+                
+                
+            </form>
+        </div>
     </body>
 </html>
