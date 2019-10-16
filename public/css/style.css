@@ -97,6 +97,9 @@ li {
 	position: relative;
 	padding-right:10px;
 	padding-left:10px;
+	color: black;
+    font-style: normal;
+    font-size: 20px;
 	background-color: #efefef;
 	margin-top: 5%;
 	width: 90%;
@@ -107,25 +110,21 @@ li {
 .contenu_principal{
 	
 	height: 1000px; 
-	color: black;
-    font-style: normal;
-	font-size: 20px;
-	padding: 10px;
+	width: 70%; 	
 	margin-top: 10%;    
+	float: left;
+	background-color: green;
 	
 }
 
 
 .image_hover img{
   overflow : hidden;
-  border-radius:1000px;
-  transform: scale(1);
-  
+  border-radius: 1000px;  
 }
 
-.image_hover:hover{
+.image_hover:hover {
   opacity: 0.5;
-  transform: scale(0.8);
 }
 
 .texte_hover{
@@ -136,6 +135,16 @@ li {
 #img2{
 	margin-top: 150px;
 }
+
+
+.contenu_secondaire{
+	height: 1000px;
+	width: 30%;
+	margin-top: 10%;
+	float: right;
+	background-color: red;
+}
+	
 
 
 
