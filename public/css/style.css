@@ -1,3 +1,6 @@
+body{
+  background-image:url("Image/arriere-plan.jpg");
+}
 .ligne_haut{
     width: 100%;
     background-color: rgb(91, 152, 223);
@@ -109,7 +112,7 @@ li {
 
 .contenu_principal{
 	
-	height: 1800px; 
+	height: 1690px; 
 	width: 70%; 	
 	margin-top: 10%;    
 	float: left;
@@ -151,8 +154,30 @@ li {
 	float: right;
 	background-color: red;
 }
-	
 
+footer a{
+  width: 100%;
+  height: 10px;
+  padding: 10px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  display : flex;
+  justify-content: space-around;
+  position: relative;
+  text-decoration: none;
+}
+footer a:hover{
+  color:red;
+}
+#logo-bas{
+  float:right;
+  position: relative;
+  top:-90px;
+  bottom:0px;
+  padding-right: 5px;
+
+}
 
 
 
