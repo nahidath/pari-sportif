@@ -59,7 +59,6 @@ label {
 .Connection{
     display: flex;
     justify-content: center;
-    position: absolute;
     margin-top: 200px;
 }
 
