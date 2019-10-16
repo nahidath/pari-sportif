@@ -36,6 +36,12 @@
                     <input type="text" name="adresse mail" id="adresse mail" required>
                 </div>
                 <div class="form-inscription">
+                        <label for="tel">
+                            Téléphone:
+                        </label>
+                        <input type="tel" name="tel" id="tel" required>
+                    </div>
+                <div class="form-inscription">
                     <label for="mdp">
                         Mot de passe:
                     </label>
@@ -48,15 +54,35 @@
                     <input type="password" name="cmdp" id="cmdp" required>
                 </div>
                 <div class="form-inscription">
+                    <label for="num-carte">
+                        Numero de carte:
+                    </label>
+                    <input type="text" name="num-carte" id="num-carte" required>
+                    </div>
+                <div class="form-inscription">
+                    <label for="crypt">
+                        Cryptogramme visuel:
+                        </label>
+                    <input type="text" name="crypt" id="crypt" required>
+                </div>
+                <div class="form-inscription">
                     <label for="gender">
                         Vous êtes : <br>
                         <input type="radio" name="gender" value="homme" checked> Un Homme<br>
                         <input type="radio" name="gender" value="femme">Une Femme<br>
                     </label> 
                 </div>
+                <div class="confirm">
+                     <label for="confirm">
+                         <input type="checkbox" name="offre" value="offre"> Je souhaite recevoir l'actu BeToWin par mail.<br>
+                         <input type="radio" name="accept" value="aceept" required>J'ai lu et j'accepte les conditions générales.<br>
+                     </label> 
+                </div>
                 <div class="form-inscription">
                     <input type="submit" value="Valider !">
                 </div>
+                
+
                 
                 
             </form>
