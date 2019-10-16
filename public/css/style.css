@@ -84,23 +84,6 @@ li {
     color: black;
   }
 
-  form.form-inscription, form.form-connexion {
-    display: table;
-}
-
-div.form-inscription, div.form-connexion {
-    display: table-row;
-}
-
-label, input {
-    display: table-cell;
-    margin-bottom: 10px;
-}
-
-label {
-    padding-right: 10px;
-}
-
 
 
 
