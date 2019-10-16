@@ -99,7 +99,7 @@ li {
 	padding-left:10px;
 	color: black;
     font-style: normal;
-    font-size: 20px;
+    font-size: 120%;
 	background-color: #efefef;
 	margin-top: 5%;
 	width: 90%;
@@ -119,21 +119,28 @@ li {
 
 
 .image_hover img{
-  overflow : hidden;
-  border-radius: 1000px;  
+	padding-left : 20px;
+	padding-top: 40px;
+  	overflow : hidden;
+  	border-radius: 1000px;  
+  	transform: scale(1);
+  	height: 90%;
+  	width: 90%;
 }
 
-.image_hover:hover {
+.image_hover img:hover{
   opacity: 0.5;
+  transform: scale(1.2);
 }
 
 .texte_hover{
-	margin-top: -250px;
-	display: none
+	margin-top: -220px;
+	margin-left: 50px;
+	
 }
 
 #img2{
-	margin-top: 150px;
+	margin-top: 300px;
 }
 
 
