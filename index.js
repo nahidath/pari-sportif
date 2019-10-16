@@ -10,7 +10,10 @@ app.engine('hbs', hbs({
   layoutsDir: __dirname + '/views/',
 }));
 app.set('view engine', 'hbs');
-
+app.get('/inscription', function(req,res){
+  console.log("inscrit");
+  res.sendStatus("200");
+})
 app.get('/contenu', function(req,res){
 	console.log(req.headers['user-agent']);	
  	res.sendFile(__dirname+'/public/apparence.html');
