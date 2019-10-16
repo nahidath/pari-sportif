@@ -38,13 +38,13 @@
                     <label for="adresse mail">
                         Adresse mail:
                     </label>
-                    <input type="text" name="adresse mail" id="adresse mail" required>
+                    <input type="email" name="adresse mail" id="adresse mail" required>
                 </div>
                 <div class="form-inscription">
                         <label for="tel">
                             Téléphone:
                         </label>
-                        <input type="tel" name="tel" id="tel" required>
+                        <input type="tel" name="tel" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required>
                     </div>
                 <div class="form-inscription">
                     <label for="mdp">
@@ -57,10 +57,30 @@
                         Confirmer votre mot de passe:
                     </label>
                     <input type="password" name="cmdp" id="cmdp" required>
+                </div> 
+                <div id="titre-cb">Cordonnées bancaires</div>
+                <div class="icon-cb"> 
+                    Type de carte : <br>
+                    <label for="icon-cb">
+                        <input type="radio" name="icon-cb" value="visa" required>
+                        <img src="Image/Visa_icon-icons.com_60549.png">
+                    </label>
+                    <label for="icon-cb">
+                        <input type="radio" name="icon-cb" value="mastercard"required>
+                        <img src="Image/Mastercard_icon-icons.com_60554.png">
+                    </label> 
+                    <label for="icon-cb">
+                        <input type="radio" name="icon-cb" value="cb-classique"required>
+                        <img src="Image/cb-204940.jpg" height="72" width="120">
+                    </label>
+                    <label for="icon-cb">
+                        <input type="radio" name="icon-cb" value="american-express"required>
+                        <img src="Image/American_Express_icon-icons.com_60519.png">
+                    </label>  
                 </div>
                 <div class="form-inscription">
                     <label for="num-carte">
-                        Numero de carte:
+                        Numéro de carte:
                     </label>
                     <input type="text" name="num-carte" id="num-carte" required>
                     </div>

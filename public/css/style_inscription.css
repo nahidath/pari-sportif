@@ -45,7 +45,7 @@ input{
     border-radius: 4px;
 }
 input[type="submit"]{
-    margin-left: 200px;
+    margin-left: 300px;
 }
 
 label {
@@ -59,7 +59,7 @@ label {
 .inscription{
 	display: flex;
     justify-content: center;
-    margin-top: 200px;
+    margin-top: 110px;
 }
 
 .titre{
@@ -67,8 +67,26 @@ label {
     display: flex;
     justify-content: center;
     position: absolute;
-    margin-top: -70px;
+    margin-top: -90px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2em;
-    border-bottom: 1px solid black;
+    text-decoration: underline black;
+}
+
+#titre-cb{
+    display: flex;
+    justify-content: center;
+    padding-left: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline black;
+}
+
+.icon-cb{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
 }
