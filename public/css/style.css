@@ -116,7 +116,7 @@ li {
 	width: 70%; 	
 	margin-top: 10%;    
 	float: left;
-	background-color: green;
+	background-color: rgb(67, 161, 67);
 	
 }
 
@@ -152,16 +152,17 @@ li {
 	width: 30%;
 	margin-top: 10%;
 	float: right;
-	background-color: red;
+	background-color: rgba(245, 75, 75, 0.973);
 }
 
+/*style du pied de page*/
 footer a{
   width: 100%;
   height: 10px;
   padding: 10px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
+  background-color: rgb(56, 50, 50);
   display : flex;
   justify-content: space-around;
   position: relative;
