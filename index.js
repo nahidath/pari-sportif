@@ -11,9 +11,12 @@ app.engine('hbs', hbs({
 }));
 app.set('view engine', 'hbs');
 app.get('/inscription', function(req,res){
-  console.log("inscrit");
+  console.log(req.query);
   res.sendStatus("200");
 })
+
+
+
 app.get('/contenu', function(req,res){
 	console.log(req.headers['user-agent']);	
  	res.sendFile(__dirname+'/public/page_principale.html');
