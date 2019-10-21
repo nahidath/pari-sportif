@@ -140,6 +140,7 @@ li {
 	margin-top: -220px;
 	margin-left: 50px;
 	
+	
 }
 
 #img2{
@@ -148,11 +149,11 @@ li {
 
 
 .contenu_secondaire{
-	height: 1500px;
+	height: 1000px;
 	width: 30%;
 	margin-top: 10%;
 	float: right;
-	background-color: rgba(245, 75, 75, 0.973);
+	background-color: red;
 }
 
 /*style du pied de page*/
