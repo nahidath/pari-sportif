@@ -8,10 +8,9 @@ function VerifTaillePassword(){
 function comparePassword(){
   var mdp_1 = document.getElementById('mdp');
   var mdp_2 = document.getElementById('cmdp');
-  if(mdp_1.value != mdp_2.value){
-    document.getElementById("corres").innerHTML = "les mots de passe ne correspondent pas";
+  if(mdp_1 != mdp_2){
     return false;
-    }else if (mdp_1.value == mdp_2.value) {
+    }else if (mdp_1 == mdp_2) {
       return true;
     }
 }
@@ -23,7 +22,7 @@ function valider(){
   if(cpOk||vpOk){
     return true;
   }else{
-    alert("Veuillez entrer un mot de passe valide");
+    alert("les mots de passe ne correspondent pas");
     event.stopPropagation();
     return false;
   }
