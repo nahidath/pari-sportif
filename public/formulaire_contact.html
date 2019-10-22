@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style_contact.css">
+    </head>
+    <body>
+        <div class="ligne_haut">
+                <div id="img_logo">
+                       <img src="Image/logo_pari.jpg" height="100" width="100"/>
+                </div>
+                <div id="logo">
+                    <strong>BeToWin</strong>
+                    <br> 
+                    <i>If you bet, you win</i>                    
+                </div>
+                <div id="bouton">
+                    <input type="button" value="Accueil"
+                    onclick="location.href='page_principale.html';">
+                </div>
+        </div>
+        <div class="Contact">
+            <b class="titre">Contact</b>
+            <div id="after_submit"></div>
+            <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <label class="required" for="name">Votre nom:</label><br />
+                <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+                <span id="name_validation" class="error_message"></span>
+            </div>
+            <div class="row">
+                <label class="required" for="email">Votre email:</label><br />
+                <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+                <span id="email_validation" class="error_message"></span>
+            </div>
+            <div class="row">
+                <label class="required" for="message">Votre message:</label><br />
+                <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+                <span id="message_validation" class="error_message"></span>
+            </div>
+        
+                <input id="submit_button" type="submit" value="Envoyer !" />
+            </form>
+        </div>
+        <p><i>Aucun remboursement sera effectué même pas un CENTIME!</i></p>
+    </body>
+</html>
