@@ -4,9 +4,10 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  
 }
 .ligne_haut{
-    width: 100%;
+    max-width: 100%;
     background-color: rgb(23, 23, 24);
     color: white;
     display : flex;
@@ -17,7 +18,7 @@ body{
 
 #logo{
     margin: 0 auto;
-    width : 200px;
+    max-width : 200px;
     padding : 20px;
     font-size: 20px;
     align-self: center;
@@ -25,13 +26,16 @@ body{
 }
 
 #bouton{
-   	width : 240px;
+   	max-width: 240px;
     padding : 5px;
     position: absolute;
     right: 10px;
     top: 20px;
 }
  
+.navigation-bar{
+  max-width: 100%;
+}
 
 ul {
     list-style-type: none;
@@ -39,7 +43,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: rgb(23, 23, 24);
-    border: 1px solid whitesmoke;
+    
 }
 
 li {
@@ -56,7 +60,7 @@ li {
   
   li a:hover:not(.active), .liste_sport:hover {
     background-color:whitesmoke;
-    color: black;
+    color:black;
   }
 
   li.liste_sport {
@@ -71,7 +75,7 @@ li {
     z-index: 1;
   }
   .sport-content a {
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -93,7 +97,7 @@ li {
 
 
 .page{
-	width: 100%;
+	max-width: 100%;
 	height: 100%;
     display : flex;
     flex-direction: row;
@@ -109,7 +113,7 @@ li {
     font-size: 120%;
 
 	margin-top: 5%;
-	width: 90%;
+	max-width: 90%;
 	height: 1800px;
 	align-self: center;
 }
@@ -117,7 +121,7 @@ li {
 .contenu_principal{
 	
 	height: 1690px; 
-	width: 70%; 	
+	max-width: 70%; 	
 	margin-top: 10%;    
 	float: left;
 	
@@ -154,9 +158,10 @@ li {
 
 
 .contenu_secondaire{
-  width: 30%;
+  max-width: 30%;
   height: 30%;
-  position: relative;
+  position: sticky;
+  top:0;
   margin: 0 0 20px;
   box-sizing:border-box;
   display: block;
@@ -170,6 +175,7 @@ li {
 
 .gros_paris{
   float: center;
+  max-width: 30%;
 }
 
 /*style du pied de page*/
@@ -180,12 +186,11 @@ li {
   float: initial;
   text-align: center;
   text-decoration: none;
-  
-  
+
   
 }
 footer{
-  width: 100%;
+  max-width: 100%;
   position: relative;
   padding: 10px 10px;
   background-color: rgb(23,23,24);
