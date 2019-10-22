@@ -127,12 +127,13 @@ li {
 
 .image_hover img{
 	padding-left : 20px;
-	padding-top: 40px;
+	padding-top: 80px;
   	overflow : hidden;
   	border-radius: 1000px;  
   	transform: scale(1);
   	height: 90%;
-  	width: 90%;
+    width: 90%;
+    margin-top: -150px;
 }
 
 .image_hover img:hover{
@@ -153,11 +154,17 @@ li {
 
 
 .contenu_secondaire{
-	height: 100px;
-	width: 30%;
-  
-  float: top right;
-  border: 2px solid black;
+  width: 30%;
+  height: 30%;
+  position: relative;
+  margin: 0 0 20px;
+  box-sizing:border-box;
+  display: block;
+  float:left;
+  line-height:14.4px;
+  border: 2px black;
+  background-color: whitesmoke;
+  border-radius: 5px;
  
 }
 
