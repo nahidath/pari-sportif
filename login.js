@@ -1,30 +1,8 @@
-//const express = require('express');
-const hbs = require('express-handlebars');
-//const app = express();
 var mysql = require('mysql');
 var express = require('express');
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var path = require('path');
-var app = express();
-app.use(express.static('public'));
-
-app.engine('hbs', hbs({
-  extname: 'hbs',
-  defaultLayout: 'index',
-  layoutsDir: __dirname + '/views/',
-}));
-app.set('view engine', 'hbs');
-app.get('/inscription', function(req,res){
-  console.log(req.query);
-  res.sendStatus("200");
-})
-
-
-app.get('/contenu', function(req,res){
-	console.log(req.headers['user-agent']);	
- 	res.sendFile(__dirname+'/public/page_principale.html');
-})
 
 var connection = mysql.createConnection({
 	host     : 'localhost',
@@ -33,7 +11,7 @@ var connection = mysql.createConnection({
 	database : 'connexion'
 });
 
-
+var app = express();
 app.use(session({
 	secret: 'secret',
 	resave: true,
@@ -52,7 +30,7 @@ app.post('/auth', (req, res)=>  {
 	var password = req.body.password;
 	if (id && password) {
 		connection.query('SELECT * FROM accounts WHERE id = ? AND password = ?', [id, password], function(error, results, fields) {
-			if (results.length >= 0) {
+			if (results.length > 0) {
 				req.session.loggedin = true;
 				req.session.id = id;
 				res.redirect('/home');
@@ -65,9 +43,9 @@ app.post('/auth', (req, res)=>  {
 		res.send('Please enter Username and Password!');
 		res.end();
 	}
-	//res.send('this is the authentication page');
+	res.send('this is the authentication page');
 })
-app.get('/home', function(req, res) {
+app.get('/home', function(req, res,_next) {
 	if (req.session.loggedin) {
 		res.send('Welcome back, ' + req.session.id + '!');
 	} else {
@@ -78,14 +56,4 @@ app.get('/home', function(req, res) {
 
 module.exports=app;
 
-
-
-
-
-app.get('/*', function (req, res) {
-  res.sendStatus("404");
-})
-
-app.listen(3000, function () {
-  console.log('Application qui écoute sur le port 3000!');
-})
+app.listen(3000);

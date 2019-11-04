@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/style_connexion.css">
+        <link rel="javascript" type="text/javascript" href="index.js">
+        
+        
     </head>
     <body>
         <div class="ligne_haut">
@@ -19,26 +22,31 @@
 		        onclick="location.href='page_principale.html';">
             </div>
         </div>
-        <div class="Connection">
+    
+        <div class="Connexion">
             <b class="titre">Connexion</b>
-            <form action="Connection" method="get" class="form-connexion">
+            <form action="auth" method="POST" class="form-connexion">
                 <div class="form-connexion">
                     <label for="id">
                     Adresse mail:
                     </label>
-                    <input type="email" name="id" id ="id"  required>
+                    <input type="email" name="id" placeholder ="Id"  required>
                 </div>
                 <div class="form-connexion">
-                    <label for="mdp">
+                    <label for="password">
                         Mot de passe:
                     </label>
-                    <input type="password" name="mdp" id="mdp" required>
+                    <input type="password" name="password" placeholder="Password" required>
                 </div>
                 <div class="form-connexion">
-                    <input type="submit" value="Se connecter">
+                    <input type="submit"  value="Se connecter">
                 </div>
                 
             </form>
         </div>
+
+       
+      
+        
     </body>
 </html>

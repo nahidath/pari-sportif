@@ -1,9 +1,8 @@
 body{
-  background-image:url("../Image/index.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+  background:url("../Image/index.png") no-repeat center fixed;
+  background-size: cover;
+  
+ 
   
 }
 .ligne_haut{
@@ -32,19 +31,16 @@ body{
     right: 10px;
     top: 20px;
 }
-<<<<<<< HEAD
 
 input{
     border: 2px solid black;
     border-radius: 4px;
 }
 
-=======
  
 .navigation-bar{
   max-width: 100%;
 }
->>>>>>> 5a31b7395561c8139c4c9177b1060fba946e96c1
 
 ul {
     list-style-type: none;
