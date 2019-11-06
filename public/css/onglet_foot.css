@@ -118,7 +118,42 @@ body{
         padding: 110px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
+      .liste_match {
+        background:none;
+        padding: 0;
+        margin-left: 10px;
+       
+      }
+      
 
+      span.icon-foot{
+        float:none;
+        position: absolute;
+        left: -9px;
+        z-index: auto;
+      }
+     .matchname1, .matchname2,.matchname3, .matchname4{
+        color:red;
+        font-size: 14px;
+        font-weight: 600;
+        display: inline;
+        position: static;
+      }
+
+      .matchsaison{
+        color:black;
+        font-size: 14px;
+      }
+
+      li{
+        display: list-item;
+        float: none;
+        position: static;
+        z-index: auto;
+        border-bottom: 2px solid #ccc;
+      }
+      
+      
       * {box-sizing:border-box}
 
       /* Slideshow container */
@@ -126,7 +161,6 @@ body{
         max-width: 70%;
         position: relative;
         margin-top: 20px;
-        
         border-radius: 10px;
         
       }
@@ -189,15 +223,15 @@ body{
         height: 10px;
         width: 10px;
         margin: 0 2px;
-        background-color:rgb(248, 103, 103);
+        background-color:#ccc;
         border-radius: 50%;
         float: left;
         position: relative;
-        transition: black 10s ease;
+        transition: background-color 0.6s ease;
       }
       
       .active, .dot:hover {
-        background-color: #717171;
+        background-color:black;
       }
       
       /* Fading animation */
@@ -254,9 +288,8 @@ body{
       /* Style the tab */
  .tab {
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
     margin-top: 50px;
+    border-bottom: 2px solid #ccc;
   }
   
   /* Style the buttons inside the tab */
@@ -274,18 +307,27 @@ body{
   /* Change background color of buttons on hover */
   .tab button:hover {
     background-color: #ddd;
+    
   }
   
   /* Create an active/current tablink class */
   .tab button.active {
-    background-color: #ccc;
+    border-bottom-style: solid;
+    border-bottom-width: 6px;
+    border-color: blue !important;
+    padding: 8px 16px !important;
   }
   
+  .tab button:hover:not(.active){
+    border-bottom-style: solid;
+    border-bottom-width: 6px;
+    border-color: blue !important;
+    padding: 8px 16px !important;
+  }
   /* Style the tab content */
   .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
+    
   }
       
