@@ -7,17 +7,17 @@ body{
 }
 .ligne_haut{
     max-width: 100%;
-    background-color: rgb(23, 23, 24);
-    color: white;
+    background-color: whitesmoke;
+    color: black;
     display : flex;
     flex-direction: row;
     justify-content: center;
     
 }
 
-#logo{
+#img_logo{
     margin: 0 auto;
-    max-width : 200px;
+    max-width : auto;
     padding : 20px;
     font-size: 20px;
     align-self: center;
@@ -47,7 +47,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(23, 23, 24);
+    background-color: whitesmoke;
     
 }
 
@@ -57,15 +57,15 @@ li {
   
   li a, .sport {
     display: block;
-    color:white;
+    color:black;
     text-align: center;
     padding: 10px 12px;
     text-decoration: none;
   }
   
   li a:hover:not(.active), .liste_sport:hover {
-    background-color:whitesmoke;
-    color:black;
+    background-color:black;
+    color:white;
   }
 
   li.liste_sport {
@@ -74,30 +74,30 @@ li {
   .sport-content {
     display: none;
     position: absolute;
-    background-color: rgb(23,23,24);
+    background-color: whitesmoke;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
   .sport-content a {
-    color: white;
+    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
   }
-  .sport-content a:hover {background-color:whitesmoke}
+  .sport-content a:hover {background-color:black}
 
   .liste_sport:hover .sport-content {
       display: block;
 }
 .liste_sport:hover .sport {
-    background-color: whitesmoke;
-    color: black;
+    background-color: black;
+    color: white;
   }
   .active {
-    background-color: whitesmoke;
-    color: black;
+    background-color: black;
+    color: white;
   }
 
 

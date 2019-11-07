@@ -5,99 +5,99 @@ body{
     
   }
   .ligne_haut{
-      max-width: 100%;
-      background-color: rgb(23, 23, 24);
-      color: white;
-      display : flex;
-      flex-direction: row;
-      justify-content: center;
-      
-  }
-  
-  #logo{
-      margin: 0 auto;
-      max-width : 200px;
-      padding : 20px;
-      font-size: 20px;
-      align-self: center;
-   
-  }
-  
-  #bouton{
-         max-width: 240px;
-      padding : 5px;
-      position: absolute;
-      right: 10px;
-      top: 20px;
-  }
-  
-  input{
-      border: 2px solid black;
-      border-radius: 4px;
-  }
-  
-   
-  .navigation-bar{
     max-width: 100%;
-  }
-  
-  ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: rgb(23, 23, 24);
-      
-  }
-  
-  li {
-      float: left;
-    }
+    background-color: whitesmoke;
+    color: black;
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
     
-    li a, .sport {
-      display: block;
-      color:white;
-      text-align: center;
-      padding: 10px 12px;
-      text-decoration: none;
-    }
+}
+
+#img_logo{
+    margin: 0 auto;
+    max-width : auto;
+    padding : 20px;
+    font-size: 20px;
+    align-self: center;
+ 
+}
+
+#bouton{
+   	max-width: 240px;
+    padding : 5px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+input{
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+ 
+.navigation-bar{
+  max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: whitesmoke;
     
-    li a:hover:not(.active), .liste_sport:hover {
-      background-color:whitesmoke;
-      color:black;
-    }
-  
-    li.liste_sport {
-      display: inline-block;
-    }
-    .sport-content {
-      display: none;
-      position: absolute;
-      background-color: rgb(23,23,24);
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-    .sport-content a {
-      color: white;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-    }
-    .sport-content a:hover {background-color:whitesmoke}
-  
-    .liste_sport:hover .sport-content {
-        display: block;
+}
+
+li {
+    float: left;
   }
-  .liste_sport:hover .sport {
-      background-color: whitesmoke;
-      color: black;
-    }
-    .active {
-      background-color: whitesmoke;
-      color: black;
-    }
+  
+  li a, .sport {
+    display: block;
+    color:black;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active), .liste_sport:hover {
+    background-color:black;
+    color:white;
+  }
+
+  li.liste_sport {
+    display: inline-block;
+  }
+  .sport-content {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .sport-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .sport-content a:hover {background-color:black}
+
+  .liste_sport:hover .sport-content {
+      display: block;
+}
+.liste_sport:hover .sport {
+    background-color: black;
+    color: white;
+  }
+  .active {
+    background-color: black;
+    color: white;
+  }
 
     /*banderole foot*/
     .bande_foot {
@@ -290,6 +290,7 @@ body{
     overflow: hidden;
     margin-top: 50px;
     border-bottom: 2px solid #ccc;
+    
   }
   
   /* Style the buttons inside the tab */
@@ -327,7 +328,27 @@ body{
   /* Style the tab content */
   .tabcontent {
     display: none;
-    padding: 6px 12px;
-    
+    padding: 6px 12px; 
+  }
+  
+
+  /*bouton de cote*/
+  .bct{
+    display: inline;
+  }
+
+  
+  
+  .bc{
+    background-color: rgba(255, 208, 0, 0.911);
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
   }
       
