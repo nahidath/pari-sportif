@@ -121,7 +121,7 @@ li {
     font-style: normal;
     font-size: 120%;
 
-	margin-top: 5%;
+	margin-top: 15%;
 	max-width: 90%;
 	height: 1800px;
 	align-self: center;
@@ -139,7 +139,6 @@ li {
 
 
 .image_hover img{
-	padding-left : 2%;
 	padding-top: 15%;
   	overflow : hidden;
   	border-radius: 1000px;  
@@ -157,7 +156,7 @@ li {
 .texte_hover{
 	margin-top: -35%;
 	margin-left: 10%;
-	font-size: 120%;
+	font-size: 70%;
 	
 	
 	
@@ -174,7 +173,7 @@ li {
   position: sticky;
   top:0;
   margin: 0 0 20px;
-  box-sizing:border-box;
+  box-sizing: border-box;
   display: block;
   float:left;
   line-height:14.4px;
