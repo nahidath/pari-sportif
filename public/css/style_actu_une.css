@@ -1,16 +1,16 @@
 .ligne_haut{
-    width: 100%;
-    background-color: rgb(91, 152, 223);
-    color: white;
+    max-width: 100%;
+    background-color: whitesmoke;
+    color: black;
     display : flex;
     flex-direction: row;
     justify-content: center;
     
 }
 
-#logo{
+#img_logo{
     margin: 0 auto;
-    width : 200px;
+    max-width : auto;
     padding : 20px;
     font-size: 20px;
     align-self: center;
@@ -18,10 +18,9 @@
 }
 
 #bouton{
-   	width : 70px;
+   	max-width: 240px;
     padding : 5px;
     position: absolute;
-    right: 40px;
+    right: 10px;
     top: 20px;
 }
-

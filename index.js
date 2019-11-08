@@ -1,7 +1,6 @@
 const express = require('express');
 const hbs = require('express-handlebars');
 const app = express();
-
 app.use(express.static('public'));
 
 app.engine('hbs', hbs({
@@ -16,11 +15,11 @@ app.get('/inscription', function(req,res){
 })
 
 
-
 app.get('/contenu', function(req,res){
 	console.log(req.headers['user-agent']);	
  	res.sendFile(__dirname+'/public/page_principale.html');
 })
+
 
 
 

@@ -17,9 +17,16 @@
   },
   "homepage": "https://github.com/nahidath/pari-sportif#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "nodemon": "^1.19.4"
+    "express-session": "^1.17.0",
+    "http": "0.0.0",
+    "jquery": "^3.4.1",
+    "mongoose": "^5.7.7",
+    "mysql": "^2.17.1",
+    "nodemon": "^1.19.4",
+    "path": "^0.12.7"
   },
   "description": ""
 }
