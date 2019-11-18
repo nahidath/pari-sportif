@@ -1,10 +1,12 @@
 .ligne_haut{
     width: 100%;
-    background-color: rgb(91, 152, 223);
-    color: white;
+    background-color: whitesmoke;
+    color: black;
     display : flex;
     flex-direction: row;
     justify-content: center;
+    border-radius: 4px;
+    border:2px solid navy;
     
 }
 

@@ -3,7 +3,7 @@
     background-size:cover;
   }
   /*banderole foot*/
-.bande_foot {
+.bande_basket {
   position: relative;
   max-width: 100%;
   margin: 0 auto;
@@ -11,7 +11,7 @@
 }
       
       
-.bande_foot .write {
+.bande_basket .write {
   position: absolute;
   bottom: 0;
   top:0;
@@ -30,7 +30,7 @@
 }
       
 
-span.icon-foot{
+span.icon-basket{
   float:none;
   position: absolute;
   left: -9px;
@@ -183,8 +183,8 @@ li{
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-/*cote paris foot*/
-.cote-paris-foot{
+/*cote paris basket*/
+.cote-paris-basket{
   margin: auto;
   max-width: 40%;
   position: relative;

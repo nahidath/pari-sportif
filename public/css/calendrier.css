@@ -1,0 +1,88 @@
+#body{
+    background-color:whitesmoke;
+    background-size:cover;
+  }
+  /*banderole foot*/
+.bande_calendrier {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top:50px;
+}
+      
+      
+.bande_calendrier .write {
+  position: absolute;
+  bottom: 0;
+  top:0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 40%;
+  padding: 110px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.inline-date{
+    margin-right: 15px;
+    flex: 1 1 auto;
+    overflow-y: hidden;
+    min-width: 0;
+    width: 100%;
+    max-width: 1065px;
+    margin-right: auto;
+    z-index: 50;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background:#fff;
+    overflow: hidden;
+    box-shadow:  4px 3px  rgba(0, 0, 0, 0.219);
+    
+}
+
+form{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1.3em;
+    line-height: 2rem;
+    
+}
+
+.date-style{
+    margin-left: 20px;
+    padding-left: 0;
+    list-style: none;
+    display:flex;
+}
+
+
+
+.date-item{
+    display: flex;
+    align-content: center;
+    margin-right: 5px;
+}
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+    
+
+
+.nomDate{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 4px 6px;
+    line-height: normal;
+    cursor: pointer;
+    background:#00265a;
+    color:#fff;
+}

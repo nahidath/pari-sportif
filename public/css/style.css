@@ -12,6 +12,9 @@ body{
     display : flex;
     flex-direction: row;
     justify-content: center;
+    border-radius: 4px;
+    border:2px solid navy;
+    border-bottom-style: hidden;
     
 }
 
@@ -40,6 +43,10 @@ input{
  
 .navigation-bar{
   max-width: 100%;
+  border-radius: 4px;
+  border:2px solid navy;
+  
+ 
 }
 
 ul {
@@ -48,6 +55,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: whitesmoke;
+    
     
 }
 

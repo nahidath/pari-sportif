@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Liste des matchs du jour</title>
+        <link rel="stylesheet" href="css/calendrier.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="html" type="text/html" href="formulaire_inscription.html">
+        <link rel="html" type="text/html" href="formulaire_connexion.html">
+        <link rel="javascript" type="text/javascript" href="index.js">
+        
+    </head>
+    <body>
+        <div class="ligne_haut">
+            <div id="img_logo">
+                <a href="page_principale.html"> <img src="Image/logo_nv.png" height="50" width="200"/></a>
+            </div>
+            <div id="bouton">
+                <input type="button" value="Inscription"
+                onclick="location.href='formulaire_inscription.html';">
+                            
+                <input type="button" value="Connexion"
+                 onclick="location.href='formulaire_connexion.html';">
+            </div>
+                        
+        </div>
+        <div class="navigation-bar">
+            <ul>
+               <li class="liste_sport">
+                    <a href="javascript:void(0)" class="sport">Sport</a>
+                    <div class="sport-content">
+                        <a href="onglet_foot.html">Football</a>
+                        <a href="onglet_tennis.html">Tennis</a>
+                        <a href="onglet_basket.html">Basket-ball</a>
+                    </div>
+                </li>
+                <li><a href="calendrier.html">Calendrier</a></li>
+                <li><a href="#plus">Plus</a></li>
+            </ul>
+        </div>
+        
+        <!--banderole calendrier-->
+        <div class="bande_calendrier">
+            <img src="Image/phoca_thumb_l_boris_paichadze_stadium_panorama_01.jpg" width="70%" height="250" />
+                <div class="write">
+                    <h1>Calendrier</h1>
+                </div>
+        </div>
+        <div class="inline-date">
+            <form action="">
+                <ul class="date-style">
+                    <li class="date-item">
+                        <input id="input0" class="inputDate" name="date" type="radio" value="" checked="">
+                        <label class="nomDate" for="input0">
+                            Lun 18
+                        </label>
+                    </li>
+                    <li class="date-item">
+                        <input id="input1" class="inputDate" name="date" type="radio" value="" checked="">
+                        <label class="nomDate" for="input1">
+                            Mar 19
+                        </label>
+                    </li>
+                    <li class="date-item">
+                        <input id="input2" class="inputDate" name="date" type="radio" value="" checked="">
+                        <label class="nomDate" for="input2">
+                            Mer 20
+                        </label>
+                    </li>
+                    <li class="date-item">
+                        <input id="input3" class="inputDate" name="date" type="radio" value="" checked="">
+                        <label class="nomDate" for="input3">
+                            Jeu 21
+                        </label>
+                    </li>
+                    <li class="date-item">
+                        <input id="input4" class="inputDate" name="date" type="radio" value="" checked="">
+                        <label class="nomDate" for="input4">
+                            Ven 22
+                        </label>
+                    </li>
+                    <li class="date-item">
+                        <input id="input5" class="inputDate" name="date" type="radio" value="" checked="">
+                            <label class="nomDate" for="input5">
+                                Sam 23
+                            </label>
+                    </li>
+                    <li class="date-item">
+                        <input id="input6" class="inputDate" name="date" type="radio" value="" checked="">
+                        <label class="nomDate" for="input6">
+                            Dim 24
+                        </label>
+                    </li>
+                    <li class="date-item">
+                        <input id="input7" class="inputDate" name="date" type="radio" value="" checked="">
+                        <label class="nomDate" for="input7">
+                            Lun 25
+                        </label>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+        
+    </body>
+</html>

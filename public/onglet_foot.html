@@ -2,7 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="css/onglet_foot.css">
+        <title>Football</title>
+        <link rel="stylesheet" href="css/onglet_foot.css">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="html" type="text/html" href="formulaire_inscription.html">
         <link rel="html" type="text/html" href="formulaire_connexion.html">
         <link rel="javascript" type="text/javascript" href="index.js">
@@ -10,187 +12,191 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/all.min.js"></script>
     </head>
     <body>
-        <div class="ligne_haut">
-            <div id="img_logo">
-                <img src="Image/logo_nv.jpg" height="50" width="200"/>
+        <div id="body">
+            <div class="ligne_haut">
+                <div id="img_logo">
+                    <a href="page_principale.html"> <img src="Image/logo_nv.png" height="50" width="200"/></a>
+                </div>
+                <div id="bouton">
+                    <input type="button" value="Inscription"
+                    onclick="location.href='formulaire_inscription.html';">
+                    
+                    <input type="button" value="Connexion"
+                    onclick="location.href='formulaire_connexion.html';">
+                </div>
+                
             </div>
-            <div id="bouton">
-		     	<input type="button" value="Inscription"
-		        onclick="location.href='formulaire_inscription.html';">
-		        
-		        <input type="button" value="Connexion"
-		        onclick="location.href='formulaire_connexion.html';">
-            </div>
-            
-        </div>
-        <div class="navigation-bar">
-            <ul>
-                <li class="liste_sport">
-                        <a href="javascript:void(0)" class="sport">Sport</a>
-                        <div class="sport-content">
-                            <a href="#">Football</a>
-                            <a href="#">Tennis</a>
-                            <a href="#">Basket-ball</a>
-                        </div>
-                <li><a href="#actus">Actus</a></li>
-                <li><a href="#plus">Plus</a></li>
-            </ul>
-        </div>
-
-        <!--banderole foot-->
-        <div class="bande_foot">
-            <img src="Image/foot.jpg" width="70%" height="250"/>
-            <div class="write">
-                <h1>Football</h1>
-            </div>
-        </div>
-             
-            <!-- Slideshow container -->
-        <div class="slideshow-container">
-
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
-            <div class="numbertext">1 / 6</div>
-            <div class="image-bord">
-            <img src="Image/actu-foot/emiliano-sala-lors-de-la-reprise-avec-le-fc-nantes_266856.jpg" style="width:40%"></div>
-            <div class="text"><a href=" http://www.footmercato.net/ligue-1/affaire-sala-nantes-cardiff-pourrait-etre-interdit-de-recrutement-pour-non-paiement_266856?utm_source=footmercato&utm_medium=link&utm_campaign=reco_article1" target="_blank">Affaire Sala, Nantes : Cardiff pourrait être interdit de recrutement pour non-paiement !</a></div>
-            </div>
-        
-            <div class="mySlides fade">
-            <div class="numbertext">2 / 6</div>
-            <div class="image-bord">
-            <img src="Image/actu-foot/mario-balotelli-retenu-par-miguel-veloso-et-daniele-gastaldello-apres-les-chants-raciste-a-verone_266851.jpg"   style="width:40%"></div>
-            <div class="text"><a href="http://www.footmercato.net/serie-a/serie-a-vague-de-reactions-apres-l-incident-raciste-contre-mario-balotelli_266851" target="_blank" >Serie A : vague de réactions après l’incident raciste contre Mario Balotelli</a></div>
-            </div>
-        
-            <div class="mySlides fade">
-            <div class="numbertext">3 / 6</div>
-            <div class="image-bord">
-            <img src="Image/actu-foot/revue-de-presse-du-4-novembre_266859.jpg" style="width:40%"></div>
-            <div class="text"><a href="http://www.footmercato.net/autre-championnat/la-presse-europeenne-horrifiee-par-la-blessure-d-andre-gomes-l-ultimatum-d-arsenal-a-unai-emery_266859" target="_blank">La presse européenne horrifiée par la blessure d’André Gomes, l’ultimatum d’Arsenal à Unai Emery</a></div>
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">4 / 6</div>
-                <div class="image-bord">
-                <img src="Image/actu-foot/leonardo-jardim-lors-de-la-rencontre-entre-l-as-monaco-et-le-stade-brestois-en-ligue-1_266854.jpg" style="width:40%"></div>
-                <div class="text"><a href="http://www.footmercato.net/ligue-1/as-monaco-leonardo-jardim-pete-un-cable-sur-l-arbitrage_266854" target="_blank" >AS Monaco : Leonardo Jardim pète un câble sur l’arbitrage</a></div>
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">5 / 6</div>
-                <div class="image-bord">
-                <img src="Image/actu-foot/denis-bouanga-libere-l-as-saint-etienne-face-a-monaco_266837.jpg" style="width:40%"></div>
-                <div class="text"><a href="http://www.footmercato.net/ligue-1/as-saint-etienne-as-monaco-les-notes-du-match_266837" target="_blank">AS Saint-Etienne - AS Monaco : les notes du match</a></div>
-            </div>
-            <div class="mySlides fade">
-            <div class="numbertext">6 / 6</div>
-            <div class="image-bord">
-                <img src="Image/actu-foot/zlatan-ibrahimovic-lors-de-la-rencontre-entre-les-la-galaxy-et-orlando_266800.jpg" style="width:40%"></div>
-                <div class="text"><a href="" target="_blank">Zlatan Ibrahimovic se rapproche d’un retour à l’AC Milan !</a></div>
-            </div>
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-        
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
-        </div> 
-
-       <!--coté paris foot-->
-       <div class="cote-paris-foot">
-           <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'Top-des-Paris')" id="defaultOpen">Top des Paris</button>
-            <button class="tablinks" onclick="openCity(event, 'Derniere-minute')"id="defaultOpen">Dernière minute </button>
-            
-            </div>
-          
-            <div id="Top-des-Paris" class="tabcontent">
-                <ul class="liste_match" id="lm">
-                    <li>
-                        <span class="icon-foot"><i class="fas fa-futbol"></i></span>
-                        <div class="matchEntry">
-                            <div class="matchDetails">
-                                
-                                <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 18:55</p>
-                                <span class="matchname">
-                                    <p class="matchname1" style="margin-bottom: 0px;margin-top:0px">FC DANT - FC MONO INFO</p>
-                                </span>
-                                <div class="bct" id="e1" style="margin-left: 200px;">
-                                    <button class="bc">1</button>
-                                    <button class="bc">0.5</button>
-                                    <button class="bc">2</button>
-                                </div> 
-                                
-                                <p class="matchsaison" style="margin-top:0px;">Ligue 1 Info Jussieu</p>
+            <div class="navigation-bar">
+                <ul>
+                    <li class="liste_sport">
+                            <a href="javascript:void(0)" class="sport">Sport</a>
+                            <div class="sport-content">
+                                <a href="onglet_foot.html">Football</a>
+                                <a href="onglet_tennis.html">Tennis</a>
+                                <a href="#">Basket-ball</a>
                             </div>
-                        </div> 
                     </li>
-                    <li><span class="icon-foot"><i class="fas fa-futbol"></i></span>
-                        <div class="matchEntry">
-                            <div class="matchDetails">
-                                <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 17:00</p>
-                                
-                                <span class="matchname">
-                                    <p class="matchname2" style="margin-bottom: 0px;margin-top:8px">PSG - NANTES</p>
-                                </span>
-                                <div class="bct" id="e2" style=" margin-left: 284px;">
-                                    <button class="bc">1</button>
-                                    <button class="bc">0.5</button>
-                                    <button class="bc">2</button>
-                                </div> 
-                                <p class="matchsaison" style="margin-top:0px;">Ligue 1</p>
-                            </div>
-                        </div> 
-                    </li>
-                    <li><span class="icon-foot"><i class="fas fa-futbol"></i></span>
-                        <div class="matchEntry">
-                            <div class="matchDetails">
-                                <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 16:30</p>
-                                
-                                <span class="matchname">
-                                    <p class="matchname3" style="margin-bottom: 0px;margin-top:8px">FC INFO - FC BIO</p>
-                                </span>
-                                <div class="bct" id="e3" style="margin-left: 265px;">
-                                    <button class="bc">1</button>
-                                    <button class="bc">0.5</button>
-                                    <button class="bc">2</button>
-                                </div> 
-                                <p class="matchsaison" style="margin-top:0px;">Ligue des champions Jussieu</p>
-                            </div>
-                       </div>  
-                    </li>
-                    <li><span class="icon-foot"><i class="fas fa-futbol"></i></span>
-                        <div class="matchEntry">
-                            <div class="matchDetails">
-                                <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 16:00</p>
-                                
-                                <span class="matchname">
-                                    <p class="matchname4" style="margin-bottom: 0px;margin-top:8px">FC OCAML - FC DANT</p>
-                                </span>
-                                <div class="bct" id="e4" style=" margin-left: 230px;">
-                                    <button class="bc">1</button>
-                                    <button class="bc">0.5</button>
-                                    <button class="bc">2</button>
-                                </div> 
-                                <p class="matchsaison" style="margin-top:0px;">Ligue 1 Info Jussieu</p>
-                            </div>
-                        </div>
-                            
-                    </li>
+                    <li><a href="calendrier.html">Calendrier</a></li>
+                    <li><a href="#plus">Plus</a></li>
                 </ul>
             </div>
-            
-            <div id="Derniere-minute" class="tabcontent">
-                <p>test 2</p> 
+
+            <!--banderole foot-->
+            <div class="bande_foot">
+                <img src="Image/foot.jpg" width="70%" height="250"/>
+                <div class="write">
+                    <h1>Football</h1>
+                </div>
             </div>
-       </div>
+                
+                <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                <div class="numbertext">1 / 6</div>
+                <div class="image-bord">
+                <img src="Image/actu-foot/emiliano-sala-lors-de-la-reprise-avec-le-fc-nantes_266856.jpg" style="width:40%"></div>
+                <div class="text"><a href=" http://www.footmercato.net/ligue-1/affaire-sala-nantes-cardiff-pourrait-etre-interdit-de-recrutement-pour-non-paiement_266856?utm_source=footmercato&utm_medium=link&utm_campaign=reco_article1" target="_blank">Affaire Sala, Nantes : Cardiff pourrait être interdit de recrutement pour non-paiement !</a></div>
+                </div>
+            
+                <div class="mySlides fade">
+                <div class="numbertext">2 / 6</div>
+                <div class="image-bord">
+                <img src="Image/actu-foot/mario-balotelli-retenu-par-miguel-veloso-et-daniele-gastaldello-apres-les-chants-raciste-a-verone_266851.jpg"   style="width:40%"></div>
+                <div class="text"><a href="http://www.footmercato.net/serie-a/serie-a-vague-de-reactions-apres-l-incident-raciste-contre-mario-balotelli_266851" target="_blank" >Serie A : vague de réactions après l’incident raciste contre Mario Balotelli</a></div>
+                </div>
+            
+                <div class="mySlides fade">
+                <div class="numbertext">3 / 6</div>
+                <div class="image-bord">
+                <img src="Image/actu-foot/revue-de-presse-du-4-novembre_266859.jpg" style="width:40%"></div>
+                <div class="text"><a href="http://www.footmercato.net/autre-championnat/la-presse-europeenne-horrifiee-par-la-blessure-d-andre-gomes-l-ultimatum-d-arsenal-a-unai-emery_266859" target="_blank">La presse européenne horrifiée par la blessure d’André Gomes, l’ultimatum d’Arsenal à Unai Emery</a></div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 6</div>
+                    <div class="image-bord">
+                    <img src="Image/actu-foot/leonardo-jardim-lors-de-la-rencontre-entre-l-as-monaco-et-le-stade-brestois-en-ligue-1_266854.jpg" style="width:40%"></div>
+                    <div class="text"><a href="http://www.footmercato.net/ligue-1/as-monaco-leonardo-jardim-pete-un-cable-sur-l-arbitrage_266854" target="_blank" >AS Monaco : Leonardo Jardim pète un câble sur l’arbitrage</a></div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 6</div>
+                    <div class="image-bord">
+                    <img src="Image/actu-foot/denis-bouanga-libere-l-as-saint-etienne-face-a-monaco_266837.jpg" style="width:40%"></div>
+                    <div class="text"><a href="http://www.footmercato.net/ligue-1/as-saint-etienne-as-monaco-les-notes-du-match_266837" target="_blank">AS Saint-Etienne - AS Monaco : les notes du match</a></div>
+                </div>
+                <div class="mySlides fade">
+                <div class="numbertext">6 / 6</div>
+                <div class="image-bord">
+                    <img src="Image/actu-foot/zlatan-ibrahimovic-lors-de-la-rencontre-entre-les-la-galaxy-et-orlando_266800.jpg" style="width:40%"></div>
+                    <div class="text"><a href="" target="_blank">Zlatan Ibrahimovic se rapproche d’un retour à l’AC Milan !</a></div>
+                </div>
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div> 
+
+            <!--coté paris foot-->
+            <div class="cote-paris-foot">
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'Top-des-Paris')" id="defaultOpen">Top des Paris</button>
+                    <button class="tablinks" onclick="openCity(event, 'Derniere-minute')"id="defaultOpen">Dernière minute </button>
+                    
+                    </div>
+                
+                    <div id="Top-des-Paris" class="tabcontent">
+                        <ul class="liste_match" id="lm">
+                            <li>
+                                <span class="icon-foot"><i class="fas fa-futbol"></i></span>
+                                <div class="matchEntry">
+                                    <div class="matchDetails">
+                                        
+                                        <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 18:55</p>
+                                        <span class="matchname">
+                                            <p class="matchname1" style="margin-bottom: 0px;margin-top:0px">FC DANT - FC MONO INFO</p>
+                                        </span>
+                                        <div class="bct" id="e1" style="margin-left: 150px;">
+                                            <button class="bc">1</button>
+                                            <button class="bc">0.5</button>
+                                            <button class="bc">2</button>
+                                        </div> 
+                                        
+                                        <p class="matchsaison" style="margin-top:0px;">Ligue 1 Info Jussieu</p>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li><span class="icon-foot"><i class="fas fa-futbol"></i></span>
+                                <div class="matchEntry">
+                                    <div class="matchDetails">
+                                        <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 17:00</p>
+                                        
+                                        <span class="matchname">
+                                            <p class="matchname2" style="margin-bottom: 0px;margin-top:8px">PSG - NANTES</p>
+                                        </span>
+                                        <div class="bct" id="e2" style=" margin-left: 230px;">
+                                            <button class="bc">1</button>
+                                            <button class="bc">0.5</button>
+                                            <button class="bc">2</button>
+                                        </div> 
+                                        <p class="matchsaison" style="margin-top:0px;">Ligue 1</p>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li><span class="icon-foot"><i class="fas fa-futbol"></i></span>
+                                <div class="matchEntry">
+                                    <div class="matchDetails">
+                                        <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 16:30</p>
+                                        
+                                        <span class="matchname">
+                                            <p class="matchname3" style="margin-bottom: 0px;margin-top:8px">FC INFO - FC BIO</p>
+                                        </span>
+                                        <div class="bct" id="e3" style="margin-left: 210px;">
+                                            <button class="bc">1</button>
+                                            <button class="bc">0.5</button>
+                                            <button class="bc">2</button>
+                                        </div> 
+                                        <p class="matchsaison" style="margin-top:0px;">Ligue des champions Jussieu</p>
+                                    </div>
+                            </div>  
+                            </li>
+                            <li><span class="icon-foot"><i class="fas fa-futbol"></i></span>
+                                <div class="matchEntry">
+                                    <div class="matchDetails">
+                                        <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 16:00</p>
+                                        
+                                        <span class="matchname">
+                                            <p class="matchname4" style="margin-bottom: 0px;margin-top:8px">FC OCAML - FC DANT</p>
+                                        </span>
+                                        <div class="bct" id="e4" style=" margin-left: 180px;">
+                                            <button class="bc">1</button>
+                                            <button class="bc">0.5</button>
+                                            <button class="bc">2</button>
+                                        </div> 
+                                        <p class="matchsaison" style="margin-top:0px;">Ligue 1 Info Jussieu</p>
+                                    </div>
+                                </div>
+                                    
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="Derniere-minute" class="tabcontent">
+                        <p>test 2</p> 
+                    </div>
+            </div>
+        </div>
+      
        
         
         <script src="js/slideshow_gallery.js"></script>
