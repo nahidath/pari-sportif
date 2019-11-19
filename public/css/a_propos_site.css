@@ -1,11 +1,31 @@
-body{
-    background-image:url("../../Image/index.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+.ligne_haut{
+    max-width: 100%;
+    background-color: whitesmoke;
+    color: black;
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
     
 }
+
+#img_logo{
+    margin: 0 auto;
+    max-width : auto;
+    padding : 20px;
+    font-size: 20px;
+    align-self: center;
+ 
+}
+
+#bouton{
+   	max-width: 240px;
+    padding : 5px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+
 
 p{
     
