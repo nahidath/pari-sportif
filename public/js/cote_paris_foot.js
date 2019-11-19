@@ -1,15 +1,15 @@
 function openCity(evt, cityName) {
-    //document.getElementById("defaultOpen").click();
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
+    var top=document.getElementById("Top-des-Paris");
+    top=top.style.display="none";
+    var der=document.getElementById("Derniere-minute");
+    der=der.style.display="contents";
+    
+  }
+
+  function cityOpen(evt,cityName){
+    var top=document.getElementById("Top-des-Paris");
+    top=top.style.display="contents";
+    var der=document.getElementById("Derniere-minute");
+    der=der.style.display="none";
     
   }

@@ -47,151 +47,102 @@
                     <h1>Tennis</h1>
                 </div>
             </div>
-             <!-- Slideshow container -->
-             <div class="slideshow-container">
-
-                    <!-- Full-width images with number and caption text -->
-                    <div class="mySlides fade">
-                    <div class="numbertext">1 / 6</div>
-                    <div class="image-bord">
-                    <img src="Image/actu-tennis/Stefanos-Tsitsipas_w484.jpg" style="width:40%"></div>
-                    <div class="text"><a href="http://www.sports.fr/tennis/atp/articles/tsitsipas-c-est-deja-grand-2628935/?covertennis/?covertennis" target="_blank">Tsitsipas, c'est déjà grand</a></div>
-                    </div>
-                
-                    <div class="mySlides fade">
-                    <div class="numbertext">2 / 6</div>
-                    <div class="image-bord">
-                    <img src="Image/actu-tennis/Rafael-Nadal_w484.jpg" style="width:40%"></div>
-                    <div class="text"><a href="http://www.sports.fr/tennis/atp/articles/nadal-un-n-1-qui-defie-le-temps-2627882/" target="_blank" >Nadal, un n°1 qui défie le temps</a></div>
-                    </div>
-                
-                    <div class="mySlides fade">
-                    <div class="numbertext">3 / 6</div>
-                    <div class="image-bord">
-                    <img src="Image/actu-tennis/Gael-Monfils_w484.jpg" style="width:40%"></div>
-                    <div class="text"><a href="http://www.sports.fr/tennis/atp/articles/paris-bercy-monfils-digne-d-un-top-10-pas-d-un-masters-2617412/" target="_blank">Monfils digne d’un Top 10, pas d’un Masters</a></div>
-                    </div>
-                    <div class="mySlides fade">
-                        <div class="numbertext">4 / 6</div>
-                        <div class="image-bord">
-                        <img src="Image/actu-tennis/Federer-Djokovic_w484.jpg" style="width:40%"></div>
-                        <div class="text"><a href="http://www.sports.fr/tennis/atp/articles/federer-prend-sa-revanche-sur-djokovic-2626979/" target="_blank" >Federer prend sa revanche sur Djokovic</a></div>
-                    </div>
-                    <div class="mySlides fade">
-                        <div class="numbertext">5 / 6</div>
-                        <div class="image-bord">
-                        <img src="Image/actu-tennis/MahutHerbertMaitre2019.jpg" style="width:40%"></div>
-                        <div class="text"><a href="https://www.tennisactu.net/news-atp-masters-mahut-herbert-les-maitres-c-est-special-83943.html" target="_blank">ATP - Masters - Mahut/Herbert, les Maîtres : "C'est spécial"</a></div>
-                    </div>
-                    <div class="mySlides fade">
-                    <div class="numbertext">6 / 6</div>
-                    <div class="image-bord">
-                        <img src="Image/actu-tennis/c637c764e33a828d3ee2037222c0549023bc27d2.jpg" style="width:40%"></div>
-                        <div class="text"><a href="https://fr.tennistemple.com/actu/coupe-davis-la-nouvelle-saveur-du-saladier-dargent-85628" target="_blank">Coupe Davis: la nouvelle saveur du Saladier d'Argent</a></div>
-                    </div>
-                    <!-- Next and previous buttons -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-                <br>
-                
-                <!-- The dots/circles -->
-                <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                    <span class="dot" onclick="currentSlide(4)"></span>
-                    <span class="dot" onclick="currentSlide(5)"></span>
-                    <span class="dot" onclick="currentSlide(6)"></span>
-                </div> 
+             
     
                 <!--coté paris tennis-->
-                <div class="cote-paris-tennis">
-                    <div class="tab">
-                        <button class="tablinks" onclick="openCity(event, 'Top-des-Paris')" id="defaultOpen">Top des Paris</button>
-                        <button class="tablinks" onclick="openCity(event, 'Derniere-minute')"id="defaultOpen">Dernière minute </button>
-                        
-                        </div>
-                    
-                        <div id="Top-des-Paris" class="tabcontent">
-                            <ul class="liste_match" id="lm">
-                                <li>
-                                    <span class="icon-tennis"><i class="fas fa-tennis-ball"></i></span>
-                                    <div class="matchEntry">
-                                        <div class="matchDetails">
-                                            
-                                            <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 18:55</p>
-                                            <span class="matchname">
-                                                <p class="matchname1" style="margin-bottom: 0px;margin-top:0px">FC DANT - FC MONO INFO</p>
-                                            </span>
-                                            <div class="bct" id="e1" style="margin-left: 150px;">
-                                                <button class="bc">1</button>
-                                                <button class="bc">0.5</button>
-                                                <button class="bc">2</button>
-                                            </div> 
-                                            
-                                            <p class="matchsaison" style="margin-top:0px;">Ligue 1 Info Jussieu</p>
+            <div class="cote-paris-tennis">
+                    <table>
+                        <div class="tab">
+                            <button class="tablinks" onclick="cityOpen(event, 'Top-des-Paris')" id="defaultOpen">Top des Paris</button>
+                            <button class="tablinks" onclick="openCity(event, 'Derniere-minute')"id="defaultOpen">Dernière minute </button>
+                                <tr>
+                                    <td>
+                                        <div id="Top-des-Paris" class="slide activex">
+                                            <ul class="liste_match" id="lm">
+                                                    <li>
+                                                        <span class="icon-foot"><i class="fas fa-tennis-ball"></i></span>
+                                                        <div class="matchEntry">
+                                                            <div class="matchDetails">
+                                                                
+                                                                <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 18:55</p>
+                                                                <span class="matchname">
+                                                                    <p class="matchname1" style="margin-bottom: 0px;margin-top:0px">FC DANT - FC MONO INFO</p>
+                                                                </span>
+                                                                <div class="bct" id="e1" style="margin-left: 150px;">
+                                                                    <button class="bc">1</button>
+                                                                    <button class="bc">0.5</button>
+                                                                    <button class="bc">2</button>
+                                                                </div> 
+                                                                
+                                                                <p class="matchsaison" style="margin-top:0px;">Ligue 1 Info Jussieu</p>
+                                                            </div>
+                                                        </div> 
+                                                    </li>
+                                                    <li><span class="icon-foot"><i class="fas fa-tennis-ball"></i></span>
+                                                        <div class="matchEntry">
+                                                            <div class="matchDetails">
+                                                                <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 17:00</p>
+                                                                
+                                                                <span class="matchname">
+                                                                    <p class="matchname2" style="margin-bottom: 0px;margin-top:8px">PSG - NANTES</p>
+                                                                </span>
+                                                                <div class="bct" id="e2" style=" margin-left: 230px;">
+                                                                    <button class="bc">1</button>
+                                                                    <button class="bc">0.5</button>
+                                                                    <button class="bc">2</button>
+                                                                </div> 
+                                                                <p class="matchsaison" style="margin-top:0px;">Ligue 1</p>
+                                                            </div>
+                                                        </div> 
+                                                    </li>
+                                                    <li><span class="icon-foot"><i class="fas fa-tennis-ball"></i></span>
+                                                        <div class="matchEntry">
+                                                            <div class="matchDetails">
+                                                                <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 16:30</p>
+                                                                
+                                                                <span class="matchname">
+                                                                    <p class="matchname3" style="margin-bottom: 0px;margin-top:8px">FC INFO - FC BIO</p>
+                                                                </span>
+                                                                <div class="bct" id="e3" style="margin-left: 210px;">
+                                                                    <button class="bc">1</button>
+                                                                    <button class="bc">0.5</button>
+                                                                    <button class="bc">2</button>
+                                                                </div> 
+                                                                <p class="matchsaison" style="margin-top:0px;">Ligue des champions Jussieu</p>
+                                                            </div>
+                                                    </div>  
+                                                    </li>
+                                                    <li><span class="icon-foot"><i class="fas fa-tennis-ball"></i></span>
+                                                        <div class="matchEntry">
+                                                            <div class="matchDetails">
+                                                                <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 16:00</p>
+                                                                
+                                                                <span class="matchname">
+                                                                    <p class="matchname4" style="margin-bottom: 0px;margin-top:8px">FC OCAML - FC DANT</p>
+                                                                </span>
+                                                                <div class="bct" id="e4" style=" margin-left: 180px;">
+                                                                    <button class="bc">1</button>
+                                                                    <button class="bc">0.5</button>
+                                                                    <button class="bc">2</button>
+                                                                </div> 
+                                                                <p class="matchsaison" style="margin-top:0px;">Ligue 1 Info Jussieu</p>
+                                                            </div>
+                                                        </div>
+                                                            
+                                                    </li>
+                                                </ul>
+                                        </div> 
+                                    </td>
+                                    <td>
+                                        <div id="Derniere-minute" class="slide">
+                                            test2
                                         </div>
-                                    </div> 
-                                </li>
-                                <li><span class="icon-tennis"><i class="fas fa-tennis-ball"></i></span>
-                                    <div class="matchEntry">
-                                        <div class="matchDetails">
-                                            <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 17:00</p>
-                                            
-                                            <span class="matchname">
-                                                <p class="matchname2" style="margin-bottom: 0px;margin-top:8px">PSG - NANTES</p>
-                                            </span>
-                                            <div class="bct" id="e2" style=" margin-left: 230px;">
-                                                <button class="bc">1</button>
-                                                <button class="bc">0.5</button>
-                                                <button class="bc">2</button>
-                                            </div> 
-                                            <p class="matchsaison" style="margin-top:0px;">Ligue 1</p>
-                                        </div>
-                                    </div> 
-                                </li>
-                                <li><span class="icon-tennis"><i class="fas fa-tennis-ball"></i></span>
-                                    <div class="matchEntry">
-                                        <div class="matchDetails">
-                                            <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 16:30</p>
-                                            
-                                            <span class="matchname">
-                                                <p class="matchname3" style="margin-bottom: 0px;margin-top:8px">FC INFO - FC BIO</p>
-                                            </span>
-                                            <div class="bct" id="e3" style="margin-left: 210px;">
-                                                <button class="bc">1</button>
-                                                <button class="bc">0.5</button>
-                                                <button class="bc">2</button>
-                                            </div> 
-                                            <p class="matchsaison" style="margin-top:0px;">Ligue des champions Jussieu</p>
-                                        </div>
-                                </div>  
-                                </li>
-                                <li><span class="icon-tennis"><i class="fas fa-tennis-ball"></i></span>
-                                    <div class="matchEntry">
-                                        <div class="matchDetails">
-                                            <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 16:00</p>
-                                            
-                                            <span class="matchname">
-                                                <p class="matchname4" style="margin-bottom: 0px;margin-top:8px">FC OCAML - FC DANT</p>
-                                            </span>
-                                            <div class="bct" id="e4" style=" margin-left: 180px;">
-                                                <button class="bc">1</button>
-                                                <button class="bc">0.5</button>
-                                                <button class="bc">2</button>
-                                            </div> 
-                                            <p class="matchsaison" style="margin-top:0px;">Ligue 1 Info Jussieu</p>
-                                        </div>
-                                    </div>
                                         
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div id="Derniere-minute" class="tabcontent">
-                            <p>test 2</p> 
-                        </div>
+                                    </td>
+                                </tr>
+                        </div>    
+                    
+                    </table>   
                 </div>
 
         </div>
