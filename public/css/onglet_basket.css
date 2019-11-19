@@ -256,5 +256,11 @@ li{
   border-radius: 16px;
 }
 
+.slide{
+  display: none;
+}
+.activex{
+  display: contents;
+}
   
       
