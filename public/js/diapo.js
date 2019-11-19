@@ -17,28 +17,29 @@ function showSlides(n) {
       slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace(" actif", "");
   }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  dots[slideIndex-1].className += " actif";
 } 
 */
 
 
 var index=0;
 
+
 function affiche(){
-	var slides= document.getElementsByClassName("slide");
-	slides[index].className="slide";
-	console.log(" index 1 ="+index+" class : "+slides[index].className);
+	var diapos= document.getElementsByClassName("diapo");
+	diapos[index].className="diapo";
+	console.log(" index 1 ="+index+" class : "+diapos[index].className);
 	
 	index++;
 	
-	if(index > slides.length-1) { index=0}
-	slides[index].className="slide active";
+	if(index > diapos.length-1) { index=0}
+	diapos[index].className="diapo actif";
 	
 	
-	console.log(" index 2 ="+index+" class : "+slides[index].className);
-	setTimeout(affiche, 2000);
+	console.log(" index 2 ="+index+" class : "+diapos[index].className);
+	setTimeout(affiche, 3500);
 			
 }
