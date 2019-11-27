@@ -1,6 +1,12 @@
+* {
+	box-sizing: border-box;
+}
+
 #body{
     background-color:whitesmoke;
     background-size:cover;
+    font-family:Arial;
+	font-size: 17px;
   }
   /*banderole foot*/
 .bande_calendrier {
@@ -23,66 +29,75 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.inline-date{
-    margin-right: 15px;
-    flex: 1 1 auto;
-    overflow-y: hidden;
-    min-width: 0;
-    width: 100%;
-    max-width: 1065px;
-    margin-right: auto;
-    z-index: 50;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    background:#fff;
-    overflow: hidden;
-    box-shadow:  4px 3px  rgba(0, 0, 0, 0.219);
-    
-}
-
-form{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    font-size: 1.3em;
-    line-height: 2rem;
-    
-}
-
-.date-style{
-    margin-left: 20px;
-    padding-left: 0;
-    list-style: none;
-    display:flex;
-}
-
-
-
-.date-item{
-    display: flex;
-    align-content: center;
-    margin-right: 5px;
-}
-input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-    box-sizing: border-box;
+.liste_match {
+    background:none;
     padding: 0;
+    margin-left: 10px;    
+    display: flex;
+    flex-direction: column;   
+}
+/*span.icon-foot{
+    float:none;
+    position: absolute;
+    left: -9px;
+    z-index: auto;
+    color: black;
+}*/
+
+.matchname{
+    color:black;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline;
+    position: static; 
+}
+.ligue{
+    color: red;
+    font-size: 14px; 
+}
+.icon-foot,.icon-tennis,.icon-basket {
+    color:black;
+}
+li{
+    position: static;
+    border-bottom: 2px solid #ccc;
+
 }
 
-    
-
-
-.nomDate{
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 4px 6px;
-    line-height: normal;
+.date {
+    overflow: hidden;
+    margin-top: 50px;
+    border-bottom: 2px solid #ccc;  
+    max-width: 50%;
+}
+.date button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
     cursor: pointer;
-    background:#00265a;
-    color:#fff;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+.date button:hover {
+    background-color: #ddd;  
+}
+.date button.active {
+    border-bottom-style: solid;
+    border-bottom-width: 6px;
+    border-color: blue !important;
+    padding: 8px 16px !important;
+    color:black;
+}
+    
+.date button:hover:not(.active){
+    border-bottom-style: solid;
+    border-bottom-width: 6px;
+    border-color: blue !important;
+    padding: 8px 16px !important;
+}
+
+.slide{
+    display: none;
 }

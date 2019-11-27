@@ -60,7 +60,7 @@
 	opacity: 0.7;
 	color: white;
 	width: 70%;
-	padding: 20px;
+	padding: 5px;
 }
 
 .numbertext {
@@ -82,16 +82,12 @@
   background:none;
   padding: 0;
   margin-left: 10px;
-       
+  display: flex;
+  flex-direction: column;   
 }
       
 
-span.icon-foot{
-  float:none;
-  position: absolute;
-  left: -9px;
-  z-index: auto;
-}
+
 .matchname1, .matchname2,.matchname3, .matchname4{
   color:red;
   font-size: 14px;
@@ -159,16 +155,11 @@ li{
   border-color: blue !important;
   padding: 8px 16px !important;
 }
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px; 
-}
-  
 
 /*bouton de cote*/
 .bct{
-  display: inline;
+  float: right;
+  margin-left: 200px;
 }
 
   

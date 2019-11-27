@@ -11,7 +11,7 @@
             <link rel="javascript" type="text/javascript" href="index.js">
             <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css">
     </head>
-    <body>
+    <body onLoad="affiche();">
         <div id="body">
             <div class="ligne_haut">
                 <div id="img_logo">
@@ -29,7 +29,7 @@
             <div class="navigation-bar">
                 <ul>
                     <li class="liste_sport">
-                            <a href="javascript:void(0)" class="sport">Sport</a>
+                            <a href="javascript:void(0)" class="sport">Sport <span class="drop"><i class="fas fa-sort-down"></i></span></a>
                             <div class="sport-content">
                                 <a href="onglet_foot.html">Football</a>
                                 <a href="onglet_tennis.html">Tennis</a>
@@ -37,7 +37,13 @@
                             </div>
                     </li>
                     <li><a href="calendrier.html">Calendrier</a></li>
-                    <li><a href="#plus">Plus</a></li>
+                    <li class="liste_plus">
+                        <a href="javascript:void(0)" class="plus">Plus <span class="drop"><i class="fas fa-sort-down"></i></span></a>
+                        <div class="content-plus">
+                            <a href="https://www.pokerstars.fr/" target="blank">Poker<span class="external-link"><i class="fas fa-external-link-alt"></i></span></a>
+                            <a href="http://streamendirect.live/" target="blank">Live Sport <span class="external-link"><i class="fas fa-external-link-alt"></i></span></a>
+                        </div>
+                    </li>
                 </ul>
             </div>
 
@@ -49,8 +55,84 @@
                 </div>
             </div>
            
-    
-                <!--coté paris basket-->
+            <!--Diapo actu-->
+                <div class="diapo actif" >
+                    <div class="container">
+                        <div class="numbertext"> 1 / 6</div>	
+                        <img src="Image/actu-basket/2504760-51993910-2560-1440.jpg">
+                        <a href="https://www.eurosport.fr/basketball/nba/2019-2020/fin-de-serie-pour-les-celtics-seches-par-les-kings_sto7542369/story.shtml" target="_blank">
+                        <div class="content">
+                            
+                            <h1>NBA</h1> 
+                            <p>Fin de série pour les Celtics, séchés par les Kings</p>
+                            
+                        </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="diapo">
+                    <div class="container">	
+                        <div class="numbertext"> 2 / 6</div>
+                        <img src="Image/actu-basket/2717896-56179950-2560-1440.jpg">
+                        <a href="https://www.eurosport.fr/basketball/nba/2019-2020/nba-les-lakers-et-les-celtics-ont-cravache_sto7539329/story.shtml" target="_blank" >
+                        <div class="content">
+                            <h1>NBA</h1> 
+                            <p>Les Lakers et les Celtics ont dû s'employer, nouveau festival de Harden</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="diapo">
+                    <div class="container">	
+                        <div class="numbertext"> 3 / 6</div>
+                        <img src="Image/actu-basket/asvel.jpg">
+                        <a href="https://www.eurosport.fr/basketball/euroleague/2019-2020/euroligue-l-asvel-s-impose-au-bout-des-prolongations-contre-l-etoile-rouge_sto7538953/story.shtml" target="_blank">
+                        <div class="content">        
+                            <h1>Euroleague</h1> 
+                            <p>Et maintenant l'ASVEL se met à bien voyager</p>    
+                        </div>
+                        </a>            
+                    </div>
+                </div>
+                <div class="diapo">
+                    <div class="container">	
+                        <div class="numbertext"> 4 / 6</div>
+                        <img src="Image/actu-basket/jordan.jpg">
+                        <a href="https://www.eurosport.fr/basketball/nba/2019-2020/michael-voulait-signer-chez-adidas-air-jordan-35-ans-dune-icone-a-laccouchement-difficile_sto7537573/story.shtml" target="_blank" >
+                        <div class="content">    
+                            <h1>NBA</h1> 
+                            <p>"Michael voulait signer chez Adidas" : Air Jordan, une icône à l’accouchement difficile</p>            
+                        </div>
+                        </a>    
+                    </div>
+                </div>
+                    
+                <div class="diapo">
+                    <div class="container">	
+                        <div class="numbertext"> 5 / 6</div>
+                        <img src="Image/actu-basket/2718464-56191310-2560-1440.jpg">
+                        <a href="https://www.eurosport.fr/basketball/nba/2019-2020/paul-george-et-les-clippers-desarmants-daisance-face-aux-hawks-49-points-pour-james-harden_sto7540823/story.shtml" target="_blank">
+                        <div class="content">        
+                            <h1>NBA</h1> 
+                            <p>George et les Clippers désarmants d’aisance, Harden pantagruélique</p>
+                        </div>
+                        </a>    
+                    </div>
+                </div>
+                <div class="diapo">
+                    <div class="container">	
+                        <div class="numbertext">6 / 6</div>
+                        <img src="Image/actu-basket/george.jpg">
+                        <a href="https://www.eurosport.fr/basketball/nba/2019-2020/retour-brillant-mais-perdant-pour-paul-george_sto7538091/story.shtml" target="_blank">
+                        <div class="content">            
+                            <h1>NBA</h1> 
+                            <p>George, un retour brillant mais perdant</p>    
+                        </div>
+                        </a>    
+                    </div>
+                </div>
+            <!--coté paris basket-->
             <div class="cote-paris-basket">
                 <table>
                     <div class="tab">
@@ -61,72 +143,69 @@
                                     <div id="Top-des-Paris" class="slide activex">
                                         <ul class="liste_match" id="lm">
                                                 <li>
-                                                    <span class="icon-foot"><i class="fas fa-basketball-ball"></i></span>
                                                     <div class="matchEntry">
                                                         <div class="matchDetails">
-                                                            
-                                                            <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 18:55</p>
+                                                            <p class="matchDetails_eventDate"><span class="icon-foot"><i class="fas fa-basketball-ball"></i></span> mardi 5 novembre - 18:55</p>
                                                             <span class="matchname">
-                                                                <p class="matchname1" style="margin-bottom: 0px;margin-top:0px">FC DANT - FC MONO INFO</p>
+                                                                <p class="matchname1">FC DANT - FC MONO INFO</p>
                                                             </span>
-                                                            <div class="bct" id="e1" style="margin-left: 150px;">
+                                                            <div class="bct" id="e1">
                                                                 <button class="bc">1</button>
                                                                 <button class="bc">0.5</button>
                                                                 <button class="bc">2</button>
                                                             </div> 
                                                             
-                                                            <p class="matchsaison" style="margin-top:0px;">Ligue 1 Info Jussieu</p>
+                                                            <p class="matchsaison">Ligue 1 Info Jussieu</p>
                                                         </div>
                                                     </div> 
                                                 </li>
-                                                <li><span class="icon-foot"><i class="fas fa-basketball-ball"></i></span>
+                                                <li>
                                                     <div class="matchEntry">
                                                         <div class="matchDetails">
-                                                            <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 17:00</p>
-                                                            
+                                                            <p class="matchDetails_eventDate" ><span class="icon-foot"><i class="fas fa-basketball-ball"></i></span> mardi 5 novembre - 17:00</p>
                                                             <span class="matchname">
-                                                                <p class="matchname2" style="margin-bottom: 0px;margin-top:8px">PSG - NANTES</p>
+                                                                <p class="matchname2">PSG - NANTES</p>
                                                             </span>
-                                                            <div class="bct" id="e2" style=" margin-left: 230px;">
+                                                            <div class="bct" id="e2">
                                                                 <button class="bc">1</button>
                                                                 <button class="bc">0.5</button>
                                                                 <button class="bc">2</button>
                                                             </div> 
-                                                            <p class="matchsaison" style="margin-top:0px;">Ligue 1</p>
+                                                            <p class="matchsaison">Ligue 1</p>
                                                         </div>
                                                     </div> 
                                                 </li>
-                                                <li><span class="icon-foot"><i class="fas fa-basketball-ball"></i></span>
+                                                <li>
                                                     <div class="matchEntry">
                                                         <div class="matchDetails">
-                                                            <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 16:30</p>
+                                                            <p class="matchDetails_eventDate"><span class="icon-foot"><i class="fas fa-basketball-ball"></i></span> mardi 5 novembre - 16:30</p>
                                                             
                                                             <span class="matchname">
-                                                                <p class="matchname3" style="margin-bottom: 0px;margin-top:8px">FC INFO - FC BIO</p>
+                                                                <p class="matchname3">FC INFO - FC BIO</p>
                                                             </span>
-                                                            <div class="bct" id="e3" style="margin-left: 210px;">
+                                                            <div class="bct" id="e3">
                                                                 <button class="bc">1</button>
                                                                 <button class="bc">0.5</button>
                                                                 <button class="bc">2</button>
                                                             </div> 
-                                                            <p class="matchsaison" style="margin-top:0px;">Ligue des champions Jussieu</p>
+                                                            <p class="matchsaison">Ligue des champions Jussieu</p>
                                                         </div>
                                                 </div>  
                                                 </li>
-                                                <li><span class="icon-foot"><i class="fas fa-basketball-ball"></i></span>
+                                                <li>
                                                     <div class="matchEntry">
                                                         <div class="matchDetails">
-                                                            <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 16:00</p>
+                                                            <p class="matchDetails_eventDate"><span class="icon-foot"><i class="fas fa-basketball-ball"></i></span> mardi 5 novembre - 16:00</p>
                                                             
                                                             <span class="matchname">
-                                                                <p class="matchname4" style="margin-bottom: 0px;margin-top:8px">FC OCAML - FC DANT</p>
+                                                                <p class="matchname4" >FC OCAML - FC DANT</p>
                                                             </span>
-                                                            <div class="bct" id="e4" style=" margin-left: 180px;">
+                                                            <div class="bct" id="e4">
                                                                 <button class="bc">1</button>
                                                                 <button class="bc">0.5</button>
                                                                 <button class="bc">2</button>
                                                             </div> 
-                                                            <p class="matchsaison" style="margin-top:0px;">Ligue 1 Info Jussieu</p>
+                                                            <p class="matchsaison">Ligue 1 Info Jussieu</p>
                                                         </div>
                                                     </div>
                                                         
@@ -147,7 +226,7 @@
             </div>
 
         </div>
-        <script src="js/slideshow_gallery.js"></script>
+        <script src="js/diapo.js"></script>
         <script src="js/cote_paris.js"></script>
     </body>
 </html>

@@ -9,7 +9,8 @@
         <link rel="html" type="text/html" href="formulaire_connexion.html">
         <link rel="javascript" type="text/javascript" href="index.js">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/all.min.js"></script>
+       
+        
     </head>
     <body onLoad="affiche();">
         <div id="body" >
@@ -29,15 +30,21 @@
             <div class="navigation-bar">
                 <ul>
                     <li class="liste_sport">
-                            <a href="javascript:void(0)" class="sport">Sport</a>
+                            <a href="javascript:void(0)" class="sport">Sport <span class="drop"><i class="fas fa-sort-down"></i></span></a>
                             <div class="sport-content">
                                 <a href="onglet_foot.html">Football</a>
                                 <a href="onglet_tennis.html">Tennis</a>
-                                <a href="#">Basket-ball</a>
+                                <a href="onglet_basket.html">Basket-ball</a>
                             </div>
                     </li>
                     <li><a href="calendrier.html">Calendrier</a></li>
-                    <li><a href="#plus">Plus</a></li>
+                    <li class="liste_plus">
+                            <a href="javascript:void(0)" class="plus">Plus <span class="drop"><i class="fas fa-sort-down"></i></span></a>
+                            <div class="content-plus">
+                                <a href="https://www.pokerstars.fr/" target="blank">Poker<span class="external-link"><i class="fas fa-external-link-alt"></i></span></a>
+                                <a href="http://streamendirect.live/" target="blank">Live Sport <span class="external-link"><i class="fas fa-external-link-alt"></i></span></a>
+                            </div>
+                        </li>
                 </ul>
             </div>
 
@@ -154,101 +161,97 @@
 		</div>   
               
 
-            <!--coté paris foot-->
-            <div class="cote-paris-foot">
-                <table>
-                        <div class="tab">
-                            <button class="tablinks" onclick="cityOpen(event, 'Top-des-Paris')" id="defaultOpen">Top des Paris</button>
-                            <button class="tablinks" onclick="openCity(event, 'Derniere-minute')"id="defaultOpen">Dernière minute </button>
-                                <tr>
-                                    <td>
-                                        <div id="Top-des-Paris" class="slide activex">
-                                            <ul class="liste_match" id="lm">
-                                                    <li>
-                                                        <span class="icon-foot"><i class="fas fa-tennis-ball"></i></span>
-                                                        <div class="matchEntry">
-                                                            <div class="matchDetails">
+        <!--coté paris foot-->
+        <div class="cote-paris-foot">
+            <table>
+                <div class="tab">
+                    <button class="tablinks" onclick="cityOpen(event, 'Top-des-Paris')" id="defaultOpen">Top des Paris</button>
+                    <button class="tablinks" onclick="openCity(event, 'Derniere-minute')"id="defaultOpen">Dernière minute </button>
+                            <tr>
+                                <td>
+                                    <div id="Top-des-Paris" class="slide activex">
+                                        <ul class="liste_match" id="lm">
+                                            <li>
+                                                <div class="matchEntry">
+                                                    <div class="matchDetails">
                                                                 
-                                                                <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 18:55</p>
-                                                                <span class="matchname">
-                                                                    <p class="matchname1" style="margin-bottom: 0px;margin-top:0px">FC DANT - FC MONO INFO</p>
-                                                                </span>
-                                                                <div class="bct" id="e1" style="margin-left: 150px;">
-                                                                    <button class="bc">1</button>
-                                                                    <button class="bc">0.5</button>
-                                                                    <button class="bc">2</button>
-                                                                </div> 
-                                                                
-                                                                <p class="matchsaison" style="margin-top:0px;">Ligue 1 Info Jussieu</p>
-                                                            </div>
+                                                        <p class="matchDetails_eventDate" ><span class="icon-foot"><i class="fas fa-futbol"></i></span> mardi 5 novembre - 18:55</p>
+                                                        <span class="matchname">
+                                                            <p class="matchname1" >FC DANT - FC MONO INFO</p>
+                                                        </span>
+                                                        <div class="bct" id="e1">
+                                                            <button class="bc">1</button>
+                                                            <button class="bc">0.5</button>
+                                                            <button class="bc">2</button>
                                                         </div> 
-                                                    </li>
-                                                    <li><span class="icon-foot"><i class="fas fa-tennis-ball"></i></span>
-                                                        <div class="matchEntry">
-                                                            <div class="matchDetails">
-                                                                <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 17:00</p>
                                                                 
-                                                                <span class="matchname">
-                                                                    <p class="matchname2" style="margin-bottom: 0px;margin-top:8px">PSG - NANTES</p>
-                                                                </span>
-                                                                <div class="bct" id="e2" style=" margin-left: 230px;">
-                                                                    <button class="bc">1</button>
-                                                                    <button class="bc">0.5</button>
-                                                                    <button class="bc">2</button>
-                                                                </div> 
-                                                                <p class="matchsaison" style="margin-top:0px;">Ligue 1</p>
-                                                            </div>
+                                                        <p class="matchsaison" >Ligue 1 Info Jussieu</p>
+                                                    </div>
+                                                </div> 
+                                            </li>
+                                            <li>
+                                                <div class="matchEntry">
+                                                    <div class="matchDetails">
+                                                        <p class="matchDetails_eventDate" ><span class="icon-foot"><i class="fas fa-futbol"></i></span> mardi 5 novembre - 17:00</p>            
+                                                        <span class="matchname">
+                                                           <p class="matchname2" >PSG - NANTES</p>
+                                                        </span>
+                                                        <div class="bct" id="e2" >
+                                                            <button class="bc">1</button>
+                                                            <button class="bc">0.5</button>
+                                                            <button class="bc">2</button>
                                                         </div> 
-                                                    </li>
-                                                    <li><span class="icon-foot"><i class="fas fa-tennis-ball"></i></span>
-                                                        <div class="matchEntry">
-                                                            <div class="matchDetails">
-                                                                <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 16:30</p>
-                                                                
-                                                                <span class="matchname">
-                                                                    <p class="matchname3" style="margin-bottom: 0px;margin-top:8px">FC INFO - FC BIO</p>
-                                                                </span>
-                                                                <div class="bct" id="e3" style="margin-left: 210px;">
-                                                                    <button class="bc">1</button>
-                                                                    <button class="bc">0.5</button>
-                                                                    <button class="bc">2</button>
-                                                                </div> 
-                                                                <p class="matchsaison" style="margin-top:0px;">Ligue des champions Jussieu</p>
-                                                            </div>
-                                                    </div>  
-                                                    </li>
-                                                    <li><span class="icon-foot"><i class="fas fa-tennis-ball"></i></span>
-                                                        <div class="matchEntry">
-                                                            <div class="matchDetails">
-                                                                <p class="matchDetails_eventDate" style="margin-bottom: 0px;margin-top: 8px;">mardi 5 novembre - 16:00</p>
-                                                                
-                                                                <span class="matchname">
-                                                                    <p class="matchname4" style="margin-bottom: 0px;margin-top:8px">FC OCAML - FC DANT</p>
-                                                                </span>
-                                                                <div class="bct" id="e4" style=" margin-left: 180px;">
-                                                                    <button class="bc">1</button>
-                                                                    <button class="bc">0.5</button>
-                                                                    <button class="bc">2</button>
-                                                                </div> 
-                                                                <p class="matchsaison" style="margin-top:0px;">Ligue 1 Info Jussieu</p>
-                                                            </div>
-                                                        </div>
+                                                        <p class="matchsaison" >Ligue 1</p>
+                                                    </div>
+                                                </div> 
+                                            </li>
+                                            <li>
+                                                <div class="matchEntry">
+                                                    <div class="matchDetails">
+                                                        <p class="matchDetails_eventDate" ><span class="icon-foot"><i class="fas fa-futbol"></i></span> mardi 5 novembre - 16:30</p>                        
+                                                        <span class="matchname">
+                                                            <p class="matchname3" >FC INFO - FC BIO</p>
+                                                        </span>
+                                                        <div class="bct" id="e3" >
+                                                            <button class="bc">1</button>
+                                                            <button class="bc">0.5</button>
+                                                            <button class="bc">2</button>
+                                                        </div> 
+                                                        <p class="matchsaison" >Ligue des champions Jussieu</p>
+                                                    </div>
+                                                </div>  
+                                            </li>
+                                            <li>
+                                                <div class="matchEntry">
+                                                    <div class="matchDetails">
+                                                        <p class="matchDetails_eventDate" ><span class="icon-foot"><i class="fas fa-futbol"></i></span> mardi 5 novembre - 16:00</p>                    
+                                                        <span class="matchname">
+                                                            <p class="matchname4" >FC OCAML - FC DANT</p>
+                                                        </span>
+                                                        <div class="bct" id="e4" >
+                                                            <button class="bc">1</button>
+                                                            <button class="bc">0.5</button>
+                                                            <button class="bc">2</button>
+                                                        </div> 
+                                                        <p class="matchsaison" >Ligue 1 Info Jussieu</p>
+                                                    </div>
+                                                </div>
                                                             
-                                                    </li>
-                                                </ul>
-                                        </div> 
-                                    </td>
-                                    <td>
-                                        <div id="Derniere-minute" class="slide">
-                                            test2
-                                        </div>
-                                        
-                                    </td>
-                                </tr>
-                        </div>    
+                                            </li>
+                                        </ul>
+                                    </div> 
+                                </td>
+                                <td>
+                                    <div id="Derniere-minute" class="slide">
+                                        test2
+                                    </div>
+                                    
+                                </td>
+                            </tr>
+                       </div>    
                     
-                    </table>   
-                </div>
+                </table>   
+            </div>
 
         </div>      
        

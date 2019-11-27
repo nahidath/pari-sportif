@@ -8,99 +8,157 @@
         <link rel="html" type="text/html" href="formulaire_inscription.html">
         <link rel="html" type="text/html" href="formulaire_connexion.html">
         <link rel="javascript" type="text/javascript" href="index.js">
-        
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css">
     </head>
     <body>
-        <div class="ligne_haut">
-            <div id="img_logo">
-                <a href="page_principale.html"> <img src="Image/logo_nv.png" height="50" width="200"/></a>
-            </div>
-            <div id="bouton">
-                <input type="button" value="Inscription"
-                onclick="location.href='formulaire_inscription.html';">
-                            
-                <input type="button" value="Connexion"
-                 onclick="location.href='formulaire_connexion.html';">
-            </div>
-                        
-        </div>
-        <div class="navigation-bar">
-            <ul>
-               <li class="liste_sport">
-                    <a href="javascript:void(0)" class="sport">Sport</a>
-                    <div class="sport-content">
-                        <a href="onglet_foot.html">Football</a>
-                        <a href="onglet_tennis.html">Tennis</a>
-                        <a href="onglet_basket.html">Basket-ball</a>
-                    </div>
-                </li>
-                <li><a href="calendrier.html">Calendrier</a></li>
-                <li><a href="#plus">Plus</a></li>
-            </ul>
-        </div>
-        
-        <!--banderole calendrier-->
-        <div class="bande_calendrier">
-            <img src="Image/phoca_thumb_l_boris_paichadze_stadium_panorama_01.jpg" width="70%" height="250" />
-                <div class="write">
-                    <h1>Calendrier</h1>
+        <div id="body">
+            <div class="ligne_haut">
+                <div id="img_logo">
+                    <a href="page_principale.html"> <img src="Image/logo_nv.png" height="50" width="200"/></a>
                 </div>
-        </div>
-        <div class="inline-date">
-            <form action="">
-                <ul class="date-style">
-                    <li class="date-item">
-                        <input id="input0" class="inputDate" name="date" type="radio" value="" checked="">
-                        <label class="nomDate" for="input0">
-                            Lun 18
-                        </label>
+                <div id="bouton">
+                    <input type="button" value="Inscription"
+                    onclick="location.href='formulaire_inscription.html';">
+                                
+                    <input type="button" value="Connexion"
+                    onclick="location.href='formulaire_connexion.html';">
+                </div>
+                            
+            </div>
+            <div class="navigation-bar">
+                <ul>
+                <li class="liste_sport">
+                        <a href="javascript:void(0)" class="sport">Sport <span class="drop"><i class="fas fa-sort-down"></i></span></a>
+                        <div class="sport-content">
+                            <a href="onglet_foot.html">Football</a>
+                            <a href="onglet_tennis.html">Tennis</a>
+                            <a href="onglet_basket.html">Basket-ball</a>
+                        </div>
                     </li>
-                    <li class="date-item">
-                        <input id="input1" class="inputDate" name="date" type="radio" value="" checked="">
-                        <label class="nomDate" for="input1">
-                            Mar 19
-                        </label>
-                    </li>
-                    <li class="date-item">
-                        <input id="input2" class="inputDate" name="date" type="radio" value="" checked="">
-                        <label class="nomDate" for="input2">
-                            Mer 20
-                        </label>
-                    </li>
-                    <li class="date-item">
-                        <input id="input3" class="inputDate" name="date" type="radio" value="" checked="">
-                        <label class="nomDate" for="input3">
-                            Jeu 21
-                        </label>
-                    </li>
-                    <li class="date-item">
-                        <input id="input4" class="inputDate" name="date" type="radio" value="" checked="">
-                        <label class="nomDate" for="input4">
-                            Ven 22
-                        </label>
-                    </li>
-                    <li class="date-item">
-                        <input id="input5" class="inputDate" name="date" type="radio" value="" checked="">
-                            <label class="nomDate" for="input5">
-                                Sam 23
-                            </label>
-                    </li>
-                    <li class="date-item">
-                        <input id="input6" class="inputDate" name="date" type="radio" value="" checked="">
-                        <label class="nomDate" for="input6">
-                            Dim 24
-                        </label>
-                    </li>
-                    <li class="date-item">
-                        <input id="input7" class="inputDate" name="date" type="radio" value="" checked="">
-                        <label class="nomDate" for="input7">
-                            Lun 25
-                        </label>
+                    <li><a href="calendrier.html">Calendrier</a></li>
+                    <li class="liste_plus">
+                        <a href="javascript:void(0)" class="plus">Plus <span class="drop"><i class="fas fa-sort-down"></i></span></a>
+                        <div class="content-plus">
+                            <a href="https://www.pokerstars.fr/" target="blank">Poker<span class="external-link"><i class="fas fa-external-link-alt"></i></span></a>
+                            <a href="http://streamendirect.live/" target="blank">Live Sport <span class="external-link"><i class="fas fa-external-link-alt"></i></span></a>
+                        </div>
                     </li>
                 </ul>
-            </form>
+            </div>
+            
+            <!--banderole calendrier-->
+            <div class="bande_calendrier">
+                <img src="Image/phoca_thumb_l_boris_paichadze_stadium_panorama_01.jpg" width="70%" height="250" />
+                    <div class="write">
+                        <h1>Calendrier</h1>
+                    </div>
+            </div>
+            
+            <!--calendrier-->
+            <div class="calendrier">
+                <table>
+                    <div class="date">
+                        <button class="jours" onclick="dayClose(event, 'Sam')" id="defaultOpen">Sam 23</button>
+                        <button class="jours" onclick="dayClose(event, 'Dim')">Dim 24</button>
+                        <button class="jours" onclick="dayClose(event, 'Lun')">Lun 25</button>
+                        <button class="jours" onclick="dayClose(event, 'Mar')" >Mar 26</button>
+                        <button class="jours" onclick="dayClose(event, 'Mer')" >Mer 27</button>
+                        <button class="jours" onclick="dayClose(event, 'Jeu')" >Jeu 28</button>
+                        <button class="jours" onclick="dayClose(event, 'Ven')" >Ven 29</button>
+                        <button class="jours" onclick="dayClose(event, 'Same')" >Sam 30</button>
+                    
+                        <tr>
+                            <td>
+                                <div id="Sam" class="slide">
+                                    <ul class="liste_match" id="lm">
+                                        <li>
+                                           
+                                                <div class="matchDetails">
+                                                    <p class="ligue"><span class="icon-foot"><i class="fas fa-futbol"></i></span> Ligue 1</p>
+                                                    <p class="matchname">PSG - OM à 16h00 sur BeinSport</p>
+                                                </div>
+                                        </li>
+                                        <li>
+                                            
+                                                <div class="matchDetails">
+                                                    <p class="ligue"><span class="icon-tennis"><i class="fas fa-tennis-ball"></i></span> Coupe Davis</p>
+                                                    <p class="matchname">R.Nadal - D.Evans à 18h00 sur RMC Sports </p>
+                                                </div>
+                                        </li>
+                                        <li>
+                                           
+                                                <div class="matchDetails">
+                                                    <p class="ligue"><span class="icon-basket"><i class="fas fa-basketball-ball"></i></span> NBA</p>
+                                                    <p class="matchname">Minnesota - Phoenix à 23h00 sur BeinSport2</p>
+                                                </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="Dim" class="slide">
+                                    <ul class="liste_match" id="lm">
+                                        <li>
+                                            
+                                                <div class="matchDetails">
+                                                    <p class="ligue"><span class="icon-foot"><i class="fas fa-futbol"></i></span> Ligue 1 Conforama</p>
+                                                    <p class="matchname">OM - NICE à 17h00 sur BeinSport</p>
+                                                </div>
+                                        </li>
+                                        <li>
+                                            
+                                                <div class="matchDetails">
+                                                        <p class="ligue"><span class="icon-tennis"><i class="fas fa-futbol"></i></span> Serie A</p>
+                                                        <p class="matchname">AC MILAN - NAPLES à 19h00 sur RMC Sports </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            
+                                                <div class="matchDetails">
+                                                        <p class="ligue"><span class="icon-basket"><i class="fas fa-basketball-ball"></i></span> Ligua ACB</p>
+                                                        <p class="matchname">Fuenlabrada - Joventut à 23h00 sur BeinSport2</p>
+                                                </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="Lun" class="slide">
+                                    test
+                                </div>
+                            </td>
+                            <td>
+                                <div id="Mar" class="slide">
+                                    test 3
+                                </div>
+                            </td>
+                            <td>
+                                <div id="Mer" class="slide">
+                                    test 5
+                                </div>
+                            </td>
+                            <td>
+                                <div id="Jeu" class="slide">
+                                    test 6
+                                </div>
+                            </td>
+                            <td>
+                                <div id="Ven" class="slide">
+                                    test 7
+                                </div>
+                            </td>
+                            <td>
+                                <div id="Same" class="slide">
+                                    test 8
+                                </div>
+                            </td>
+                        </tr>
+                    </div>
+                </table>
+            </div>
         </div>
-
+        
+        <script src="js/calendar.js"></script>
         
     </body>
 </html>
