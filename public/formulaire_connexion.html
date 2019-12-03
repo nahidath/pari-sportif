@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/style_connexion.css">
         <link rel="javascript" type="text/javascript" href="index.js">
+        <link rel="javascript" type="text/javascript" href="/route/user.js">
         
         
     </head>
@@ -21,18 +22,18 @@
     
         <div class="Connexion">
             <b class="titre">Connexion</b>
-            <form action="/" method="POST" class="form-connexion">
+            <form action="/login" method="POST" class="form-connexion">
                 <div class="form-connexion">
                     <label for="id">
-                    Nom d'utilisateur:
+                    Email :
                     </label>
-                    <input type="email" name="id" placeholder ="Id"  required>
+                    <input type="email" name="email" placeholder ="Email"  required>
                 </div>
                 <div class="form-connexion">
                     <label for="password">
                         Mot de passe:
                     </label>
-                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="password" placeholder="Mot de passe" required>
                 </div>
                 <div class="form-connexion">
                     <input type="submit"  value="Se connecter">
@@ -40,9 +41,5 @@
                 
             </form>
         </div>
-
-       
-      
-        
     </body>
 </html>

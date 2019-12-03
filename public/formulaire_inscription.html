@@ -18,7 +18,7 @@
         <div class="inscription">
             <b class="titre">Inscription</b>
             
-            <form action="/users/register" method="POST" class="form-inscription" id="inscription-form" onsubmit="return valider()">
+            <form action="/sign_up" method="POST" class="form-inscription" id="inscription-form" onsubmit="return valider()">
                 <div class="form-inscription">
                     <label for="nom">
                         Nom: 
@@ -35,7 +35,7 @@
                     <label for="adresse mail">
                         Adresse mail:
                     </label>
-                    <input type="email" name="adresse mail" id="adresse mail" required>
+                    <input type="email" name="email" id="email" required>
                 </div>
                 <div class="form-inscription">
                         <label for="tel">
@@ -61,19 +61,19 @@
                 <div class="icon-cb"> 
                     Type de carte : <br>
                     <label for="icon-cb">
-                        <input type="radio" name="icon-cb" value="visa" required>
+                        <input type="radio" name="icon_cb" value="visa" required>
                         <img src="Image/Visa_icon-icons.com_60549.png">
                     </label>
                     <label for="icon-cb">
-                        <input type="radio" name="icon-cb" value="mastercard"required>
+                        <input type="radio" name="icon_cb" value="mastercard"required>
                         <img src="Image/Mastercard_icon-icons.com_60554.png">
                     </label> 
                     <label for="icon-cb">
-                        <input type="radio" name="icon-cb" value="cb-classique"required>
+                        <input type="radio" name="icon_cb" value="cb-classique"required>
                         <img src="Image/cb-204940.jpg" height="72" width="120">
                     </label>
                     <label for="icon-cb">
-                        <input type="radio" name="icon-cb" value="american-express"required>
+                        <input type="radio" name="icon_cb" value="american-express"required>
                         <img src="Image/American_Express_icon-icons.com_60519.png">
                     </label>  
                 </div>
@@ -81,7 +81,7 @@
                     <label for="num-carte">
                         Numéro de carte:
                     </label>
-                    <input type="text" name="num-carte" id="num-carte" required>
+                    <input type="text" name="num_carte" id="num-carte" required>
                     </div>
                 <div class="form-inscription">
                     <label for="crypt">
