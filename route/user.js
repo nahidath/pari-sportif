@@ -1,9 +1,12 @@
-// importation des modules  
+// importing modules  
 const express = require('express');  
 const router = express.Router();  
+const UsersController = require('../controller/userController');
     
-// importation de User Schema  
+// importing User Schema  
 const User = require('../model/user'); 
+
+
 
 router.post('/login', function(req, res) { 
       
@@ -11,9 +14,9 @@ router.post('/login', function(req, res) {
   
           User.register(Users, req.body.password, function(err, user) { 
             if (err) { 
-              res.json({success:false, message:"Your account could  not be saved. Error:" , err})  
+              res.json({success:false, message:"Your account could  not be saved. Error: ", err})  
             }else{ 
-              res.json({success: true, message: "Your account has been saved"}) 
+              res.json({success: true, message: "Your account has  been saved"}) 
             } 
           }); 
 }); 

@@ -3,6 +3,10 @@ const hbs = require('express-handlebars');
 var bodyParser=require("body-parser"); 
 const mongoose = require('mongoose'); 
 const passport= require('passport');
+var session=require('express-session');
+const flash = require('connect-flash');
+const router = express.Router();
+
 
 //Registration
 const uri="mongodb+srv://dbProject:DANT10@cluster0-r2dpv.mongodb.net/test?retryWrites=true&w=majority"
@@ -25,8 +29,10 @@ const app = express();
 app.use(express.static('public'));
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ 
-  extended: true
+  extended: false
 })); 
+
+
 
 app.post('/sign_up', function(req,res){ 
   var nom = req.body.nom; 
@@ -74,14 +80,44 @@ app.get('/',function(req,res){
 
 
 // login
-const User = require('./model/user'); 
-  
-const LocalStrategy = require('passport-local').Strategy; 
-passport.use(new LocalStrategy(User.authenticate())); 
-app.use(passport.initialize()); 
-app.use(passport.session()); 
-passport.serializeUser(User.serializeUser()); 
-passport.deserializeUser(User.deserializeUser()); 
+const {User}= require('./model/user');
+app.post('/api/user/signup', function(req, res){
+  const user= new User({
+    email: req.body.email,
+    password: req.body.password
+  }).save((err, response)=>{
+    if(err) res.status(400).send(err)
+    res.status(200).send(response)
+  })
+})
+
+app.post('/api/user/signin', function(req,res){
+  const user= new User({
+    email: req.body.email,
+    password: req.body.password
+  })
+
+ user.save(function(err){
+   User.find({'email': req.body.email}, function(err, user){
+
+    if(!user)res.json({message:'Echec de connexion, email non trouvé'})
+
+    if(user!=null){
+      user.comparePassword(req.body.password, function(err, isMatch){
+      if(err) throw err;
+      if(!isMatch) return res.status(400).json({
+        message:'Mauvais mot de passe'
+      });
+      res.status(200).send('Connexion reussie !');
+    })
+    }
+    
+  })
+  })
+});
+
+
+
 
 
 
