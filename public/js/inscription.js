@@ -19,10 +19,10 @@ function valider(){
   
   var cpOk=comparePassword();
   if(cpOk){
-    alert("ici");
+    alert("Les informations renseignées ont bien été enregistrées");
     return true;
   }else{
-    alert("les mots de passe ne correspondent pas");
+    alert("Les mots de passe ne correspondent pas");
     event.stopPropagation();
     return false;
   }

@@ -2,9 +2,11 @@ const express = require('express');
 const hbs = require('express-handlebars');
 var bodyParser=require("body-parser"); 
 const mongoose = require('mongoose'); 
+mongoose.set('useCreateIndex', true);
 const passport= require('passport');
 var session=require('express-session');
 const flash = require('connect-flash');
+const bcrypt= require('bcryptjs');
 const router = express.Router();
 
 
@@ -63,7 +65,7 @@ var data = {
   "accept":accept 
 } 
 
-db.collection('details').insertOne(data,function(err, collection){ 
+db.collection('connexion').insertOne(data,function(err, collection){ 
   if (err) throw err; 
   console.log("Nouvelle personne ajoutée !"); 
           
@@ -80,7 +82,7 @@ app.get('/',function(req,res){
 
 
 // login
-const {User}= require('./model/user');
+const {User}= require('./model/user.js');
 app.post('/api/user/signup', function(req, res){
   const user= new User({
     email: req.body.email,
@@ -95,25 +97,37 @@ app.post('/api/user/signin', function(req,res){
   const user= new User({
     email: req.body.email,
     password: req.body.password
-  })
+  });
 
  user.save(function(err){
-   User.find({'email': req.body.email}, function(err, user){
+   
+  
+  User.findOne({email: req.body.email}).select('email password').exec(function(err, user){
+    console.log({'email':req.body.email});
+    //user=req.body.email;
+    console.log(user);
+    if(!user)res.json({message:'Echec de connexion, email non trouvé'});
+    console.log(req.body.email);
 
-    if(!user)res.json({message:'Echec de connexion, email non trouvé'})
-
-    if(user!=null){
-      user.comparePassword(req.body.password, function(err, isMatch){
+      
+    /*user.comparePassword(req.body.password, function(err, isMatch){
       if(err) throw err;
+      
       if(!isMatch) return res.status(400).json({
         message:'Mauvais mot de passe'
       });
       res.status(200).send('Connexion reussie !');
-    })
-    }
+    });*/
+    bcrypt.compare(req.body.password, user.password, function(err,isMatch){
+      if (err) throw err;
+
+      if(!isMatch) return res.status(400).json({message: 'Mauvais mot de passe'});
+      res.status(200).send('Connexion reussie');
+    });
     
-  })
-  })
+    
+  });
+  });
 });
 
 
