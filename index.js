@@ -5,9 +5,11 @@ const mongoose = require('mongoose');
 mongoose.set('useCreateIndex', true);
 const passport= require('passport');
 var session=require('express-session');
-const flash = require('connect-flash');
+const flash = require('express-flash-messages');
 const bcrypt= require('bcryptjs');
 const router = express.Router();
+const cookieParser = require('cookie-parser');
+
 
 
 //Registration
@@ -33,7 +35,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ 
   extended: false
 })); 
-
+// set sessions and cookie parser
+app.use(cookieParser());
+app.use(session({
+  secret: 'secret', 
+  cookie: { maxAge: 60000 },
+  resave: false,    // forces the session to be saved back to the store
+  saveUninitialized: false  // dont save unmodified
+}));
+app.use(flash());
 
 
 app.post('/sign_up', function(req,res){ 
@@ -82,11 +92,12 @@ app.get('/',function(req,res){
 
 
 // login
-const {User}= require('./model/user.js');
+const {User}= require('./model/user');
 app.post('/api/user/signup', function(req, res){
   const user= new User({
     email: req.body.email,
-    password: req.body.password
+    password: req.body.password,
+    username: req.body.nom
   }).save((err, response)=>{
     if(err) res.status(400).send(err)
     res.status(200).send(response)
@@ -96,17 +107,23 @@ app.post('/api/user/signup', function(req, res){
 app.post('/api/user/signin', function(req,res){
   const user= new User({
     email: req.body.email,
-    password: req.body.password
+    password: req.body.password,
+    username: req.body.nom
   });
 
- user.save(function(err){
+ user.save(function log (err){
    
   
-  User.findOne({email: req.body.email}).select('email password').exec(function(err, user){
+  User.findOne({email: req.body.email}, {username: req.body.nom}).select('email password username').exec(function(err, user){
     console.log({'email':req.body.email});
     //user=req.body.email;
     console.log(user);
-    if(!user)res.json({message:'Echec de connexion, email non trouvé'});
+    if(!user){
+      //req.flash('error', 'Email introuvable !');
+      //return res.send(req.flash('notify'));
+      return res.redirect('/ble');
+    }
+      //res.json({message:'Echec de connexion, email non trouvé'});
     console.log(req.body.email);
 
       
@@ -122,7 +139,8 @@ app.post('/api/user/signin', function(req,res){
       if (err) throw err;
 
       if(!isMatch) return res.status(400).json({message: 'Mauvais mot de passe'});
-      res.status(200).send('Connexion reussie');
+        res.status(200).send('Connexion reussi');
+      
     });
     
     
@@ -130,7 +148,24 @@ app.post('/api/user/signin', function(req,res){
   });
 });
 
+app.get('/ble', (req,res)=>{
+  //console.log(req.flash('notify'));
+  //return res.send(req.flash('notify'));
+  //return res.redirect('formulaire_connexion.html');
+  res.render('connexion', { message: req.flash('error') });
+  
+})
 
+
+/*function isAuthCheck(req, res, next) {
+        if (!req.isAuthenticated()) return next();
+        res.redirect('/profile');
+      }
+const isAuthCheck= require('./middleware/auth');
+app.get('/profile', isAuthCheck, function(req, res){
+  res.render('profile', {user:req.user});
+  console.log({user:req.user});
+});*/
 
 
 
