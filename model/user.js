@@ -1,6 +1,7 @@
 const mongoose=require('mongoose');
 var passportLocalMongoose = require("passport-local-mongoose");
 const uniqueValidator = require('mongoose-unique-validator');
+const bcrypt= require('bcryptjs');
 const userSchema=mongoose.Schema({
     email:{
         type: String,
@@ -20,7 +21,7 @@ const userSchema=mongoose.Schema({
 });
 userSchema.plugin(uniqueValidator);
 
-const bcrypt= require('bcryptjs');
+
 let SALT=10;
 userSchema.pre('save', function(next){
     var user =this;

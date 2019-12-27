@@ -1,5 +1,5 @@
 body{
-    background-image:url("../../Image/index.png");
+   
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -51,7 +51,7 @@ label, input {
     
 }
 input{
-    border: 2px solid black;
+    border: 1px solid  black;
     border-radius: 4px;
 }
 input[type="submit"]{

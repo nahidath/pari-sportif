@@ -19,8 +19,11 @@
         </div>
         <div class="Contact">
             <b class="titre">Contact</b>
+            <p>
+                {{msg}}
+            </p>
             <div id="after_submit"></div>
-            <form id="contact_form" action="/email" method="POST">
+            <form id="contact_form" action="/email" method="POST" >
             <div class="row">
                 <label for="name">Votre nom:</label><br />
                 <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
