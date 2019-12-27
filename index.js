@@ -184,8 +184,8 @@ app.post('/email',function(req, res, next) {
   let transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'lilagadapa@gmail.com', // generated ethereal user
-        pass: 'dadaakomi'  // generated ethereal password
+        user: 'bettowindant@gmail.com', // generated ethereal user
+        pass: 'Bettowin-93'  // generated ethereal password
     },
     tls:{
       rejectUnauthorized:false
@@ -194,8 +194,8 @@ app.post('/email',function(req, res, next) {
 
 
   var mailOptions = {
-    from: '"Bet to Win Contact" <lilagadapa@gmail.com>', // sender address
-    to: 'lilagadapa@gmail.com', // list of receivers
+    from: '"Bet to Win Contact" <bettowindant@gmail.com>', // sender address
+    to: 'bettowindant@gmail.com', // list of receivers
     subject: 'Bet to Win Contact Requête', // Subject line
     text: 'Hello world?', // plain text body
     html: output //html body
