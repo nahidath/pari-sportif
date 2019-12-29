@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 mongoose.set('useCreateIndex', true);
 const passport= require('passport');
 var session=require('express-session');
-const flash = require('express-flash-messages');
+const flash = require('express-flash');
 const bcrypt= require('bcryptjs');
 const router = express.Router();
 const cookieParser = require('cookie-parser');
@@ -13,6 +13,7 @@ var nev = require('email-verification')(mongoose);
 const {User}= require('./model/user');
 const nodemailer = require("nodemailer");
 let jsdom = require('jsdom').JSDOM;
+
 
 
 //Registration
@@ -43,13 +44,20 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }))
 app.use(cookieParser());
 app.use(session({
   secret: 'secret', 
-  cookie: { maxAge: 60000 },
   resave: false,    // forces the session to be saved back to the store
-  saveUninitialized: false  // dont save unmodified
+  saveUninitialized: true  // dont save unmodified
 }));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(flash());
 
-
+app.use(function(req, res, next) {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  //res.locals.sessionFlash = req.session.sessionFlash;
+  //delete req.session.sessionFlash;
+  next();
+});
 
 app.post('/sign_up', function(req,res){ 
   var nom = req.body.nom; 
@@ -82,8 +90,9 @@ app.post('/sign_up', function(req,res){
 
   db.collection('connexion').insertOne(data,function(err, collection){ 
     if (err) throw err; 
-    console.log("Nouvelle personne ajoutée !"); 
-    return res.redirect('page_principale.html');         
+    console.log("Nouvelle personne ajoutée !");
+    req.flash('success_msg','Inscription réussie, vous pouvez à présent vous connecter !'); 
+    res.redirect('formulaire_connexion.html');         
   }); 
 });
       
@@ -101,6 +110,7 @@ app.get('/',function(req,res){
 
   
 // login
+app.get('/connexion', (req, res) => res.render('connexion'));
 
 app.post('/api/user/signup', function(req, res){
   const user= new User({
@@ -116,18 +126,18 @@ app.post('/api/user/signup', function(req, res){
 app.post('/api/user/signin', function(req,res){
   const user= new User({
     email: req.body.email,
-    password: req.body.password,
-    username: req.body.nom
+    password: req.body.password
   });
 
  user.save(function log (err){
    
   
-  User.findOne({email: req.body.email}, {username: req.body.nom}).select('email password username').exec(function(err, user){
+  User.findOne({email: req.body.email}).select('email password ').exec(function(err, user){
     if(!user){
       return res.redirect('/ble');
+      
     }
- 
+    console.log(user.username);
     /*user.comparePassword(req.body.password, function(err, isMatch){
       if(err) throw err;
       
@@ -141,7 +151,7 @@ app.post('/api/user/signin', function(req,res){
 
       if(!isMatch) return res.redirect('/ble');
         //res.status(200).send('Connexion reussi');
-        res.render('profile', {user: req.body.nom});
+        res.render('profile', {name: req.user});
       
     });
     
@@ -155,16 +165,6 @@ app.get('/ble', (req,res)=>{
   
 })
 
-//profile page
-/*function isAuthCheck(req, res, next) {
-        if (!req.isAuthenticated()) return next();
-        res.redirect('/profile');
-      }
-const isAuthCheck= require('./middleware/auth');
-app.get('/profile', isAuthCheck, function(req, res){
-  res.render('profile', {user:req.user});
-  console.log({user:req.user});
-});*/
 
 
 //contact form

@@ -19,11 +19,10 @@
 		        onclick="location.href='page_principale.html';">
             </div>
         </div>
-        <p>
-            {{message}}
-        </p>
+        
         <div class="Connexion">
             <b class="titre">Connexion</b>
+            <span>{{{message}}}</span>
             <form action="/api/user/signin" method="POST" class="form-connexion">
                 <div class="form-connexion">
                     <label for="id">

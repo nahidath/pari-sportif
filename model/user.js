@@ -13,10 +13,6 @@ const userSchema=mongoose.Schema({
         type: String,
         required: true,
         minlength: 8
-    },
-    username:{
-        type: String, 
-        required: true
     }
 });
 userSchema.plugin(uniqueValidator);
