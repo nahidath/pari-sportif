@@ -9,8 +9,11 @@
         <link rel="html" type="text/html" href="formulaire_connexion.html">
         <link rel="javascript" type="text/javascript" href="index.js">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css">
+        <script type="text/javascript" src="js/calendar.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.js" type="text/javascript"></script>
     </head>
-    <body>
+    <body onLoad="date_heure();">
         <div id="body">
             <div class="ligne_haut">
                 <div id="img_logo">
@@ -58,14 +61,16 @@
             <div class="calendrier">
                 <table>
                     <div class="date">
-                        <button class="jours" onclick="dayClose(event, 'Sam')" id="defaultOpen">Sam 23</button>
-                        <button class="jours" onclick="dayClose(event, 'Dim')">Dim 24</button>
-                        <button class="jours" onclick="dayClose(event, 'Lun')">Lun 25</button>
-                        <button class="jours" onclick="dayClose(event, 'Mar')" >Mar 26</button>
-                        <button class="jours" onclick="dayClose(event, 'Mer')" >Mer 27</button>
-                        <button class="jours" onclick="dayClose(event, 'Jeu')" >Jeu 28</button>
-                        <button class="jours" onclick="dayClose(event, 'Ven')" >Ven 29</button>
-                        <button class="jours" onclick="dayClose(event, 'Same')" >Sam 30</button>
+                        
+                        <button class="jours" onclick="dayClose(event, 'Sam')" id="defaultOpen"></button>
+                        <button class="jours" onclick="dayClose(event, 'Dim')"></button>
+                        <button class="jours" onclick="dayClose(event, 'Lun')"></button>
+                        <button class="jours" onclick="dayClose(event, 'Mar')" ></button>
+                        <button class="jours" onclick="dayClose(event, 'Mer')" ></button>
+                        <button class="jours" onclick="dayClose(event, 'Jeu')" ></button>
+                        <button class="jours" onclick="dayClose(event, 'Ven')" ></button>
+                        <button class="jours" onclick="dayClose(event, 'Same')" ></button>
+                        
                     
                         <tr>
                             <td>

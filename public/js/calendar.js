@@ -1,42 +1,4 @@
-/*function dayOpen(evt, cityName) {
-    var sam=document.getElementById("Sam");
-    sam=sam.style.display="none";
-    var dim=document.getElementById("Dim");
-    dim=dim.style.display="contents";
-    var lun=document.getElementById("Lun");
-    lun=lun.style.display="contents";
-    var mar=document.getElementById("Mar");
-    mar=mar.style.display="contents";
-    var mer=document.getElementById("Mer");
-    mer=mer.style.display="contents";
-    var jeu=document.getElementById("Jeu");
-    jeu=jeu.style.display="contents";
-    var ven=document.getElementById("Ven");
-    ven=ven.style.display="contents";
-    var same=document.getElementById("Same");
-    same=same.style.display="contents";
-  }
-
-  function dayClose(evt,cityName){
-    var sam=document.getElementById("Sam");
-    sam=sam.style.display="contents";
-    var dim=document.getElementById("Dim");
-    dim=dim.style.display="none";
-    var lun=document.getElementById("Lun");
-    lun=lun.style.display="none";
-    var mar=document.getElementById("Mar");
-    mar=mar.style.display="none";
-    var mer=document.getElementById("Mer");
-    mer=mer.style.display="none";
-    var jeu=document.getElementById("Jeu");
-    jeu=jeu.style.display="none";
-    var ven=document.getElementById("Ven");
-    ven=ven.style.display="none";
-    var same=document.getElementById("Same");
-    same=same.style.display="none";
-  }*/
-  
-  function dayClose(evt, nom) {
+function dayClose(evt, nom) {
     var i, slide, jours;
     
     slide = document.getElementsByClassName("slide");
@@ -49,12 +11,28 @@
     }
     
     var op=document.getElementById(nom);
-    console.log(nom);
     if (typeof op !== "undefined" && op !== null){
       op.style.display = "block";
     }
   
     evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+
+
+function date_heure(){
+  var x=document.getElementsByClassName("jours");
+  let days = [];
+  let daysRequired = 7
+  moment.locale('fr');
+  for (let i = 1; i <= daysRequired; i++) {
+    days.push( moment().add(i, 'days').format('DD MMM') );
   }
-  document.getElementById("defaultOpen").click();
-  
+  for(j=0;j<days.length;j++){
+    for(y=0;y<x.length;y++){
+      x[j]=x[j].innerHTML=days[j];
+    } 
+  }
+}
+                     
+

@@ -107,6 +107,7 @@ li{
   margin: auto;
   max-width: 40%;
   position: relative;
+  right: 100px;
 }
 /* Style the tab */
 .tab {

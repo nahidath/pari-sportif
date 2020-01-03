@@ -13,6 +13,7 @@ var nev = require('email-verification')(mongoose);
 const {User}= require('./model/user');
 const nodemailer = require("nodemailer");
 let jsdom = require('jsdom').JSDOM;
+var moment=require('moment');
 
 
 
