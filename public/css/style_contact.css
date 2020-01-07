@@ -42,7 +42,15 @@ form.contact_form {
 div.contact_form {
     display: table-row;
 }
-
+#after-submit{
+    display: table-row;
+}
+#after-submit a{
+    text-decoration: none;
+}
+#after-submit a:hover{
+    color: blue;
+}
 label, input {
     display: table-cell;
     margin-bottom: 8px;

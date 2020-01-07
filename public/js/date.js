@@ -4,7 +4,7 @@ function date_heure(){
         let days = [];
         let daysRequired = 7
         moment.locale('fr');
-        for (let i = 1; i <= daysRequired; i++) {
+        for (let i = 0; i <= daysRequired; i++) {
           days.push( moment().add(i, 'days').format('dddd DD MMMM') );
         }
         for(j=0;j<days.length;j++){

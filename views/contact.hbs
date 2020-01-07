@@ -4,6 +4,10 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/style_contact.css">
         <link rel="javascript" type="text/javascript" href="index.js">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="ligne_haut">
@@ -18,43 +22,12 @@
             </div>
         </div>
         <div class="Contact">
-            <b class="titre">Contact</b>
-            <p>
-                {{msg}}
-            </p>
-            <div id="after_submit"></div>
-            <form id="contact_form" action="/email" method="POST" >
-            <div class="row">
-                <label for="name">Votre nom:</label><br />
-                <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+            <b class="titre">Contact</b><br>
+            <div id="alert alert-success">{{msg}}<br>
+                <a href="page_principale.html">Cliquez ici pour revenir à l'accueil</a>
+            </div>
             
-            </div>
-            <div class="row">
-                <label for="email">Votre email:</label><br />
-                <input id="email" class="input" name="email" type="email" value="" size="30" /><br />
-                
-            </div>
-            <div class="row">
-                <label for="subject">Objet de votre requête:</label><br />
-                <input id="subject" class="input" name="subject" type="text" value="" size="30" /><br />
-              
-            </div>
-            <div class="row">
-                <label for="message">Votre message:</label><br />
-                <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
-                
-            </div>
-        
-                <input id="submit_button" type="submit" value="Envoyer !" />
-            </form>
         </div>
         <p><i>Aucun remboursement sera effectué même pas un CENTIME!</i></p>
-        <footer>
-            <div class="nav-masthead" style="margin-top: 10px;">
-                <a class="nav-link" href="#">Aide</a>
-                <a class="nav-link" href="formulaire_contact.html">Contact</a>
-                <a class="nav-link" href="a_propos_site.html">About</a>
-              </div>
-        </footer>
     </body>
 </html>
