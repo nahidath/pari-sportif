@@ -5,15 +5,15 @@ const mongoose = require('mongoose');
 mongoose.set('useCreateIndex', true);
 const passport= require('passport');
 var session=require('express-session');
-const flash = require('express-flash');
 const bcrypt= require('bcryptjs');
 const router = express.Router();
 const cookieParser = require('cookie-parser');
-var nev = require('email-verification')(mongoose);
 const {User}= require('./model/user');
 const nodemailer = require("nodemailer");
 let jsdom = require('jsdom').JSDOM;
 var moment=require('moment');
+
+module.exports = router;
 
 
 
@@ -50,15 +50,6 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(flash());
-
-app.use(function(req, res, next) {
-  res.locals.success_msg = req.flash('success_msg');
-  res.locals.error_msg = req.flash('error_msg');
-  //res.locals.sessionFlash = req.session.sessionFlash;
-  //delete req.session.sessionFlash;
-  next();
-});
 
 app.post('/sign_up', function(req,res){ 
   var nom = req.body.nom; 
@@ -92,8 +83,7 @@ app.post('/sign_up', function(req,res){
   db.collection('connexion').insertOne(data,function(err, collection){ 
     if (err) throw err; 
     console.log("Nouvelle personne ajoutée !");
-    req.flash('success_msg','Inscription réussie, vous pouvez à présent vous connecter !'); 
-    res.redirect('formulaire_connexion.html');         
+    res.render('success', {success_msg:'Inscription réussie, vous pouvez à présent vous connecter !'});          
   }); 
 });
       
@@ -138,21 +128,11 @@ app.post('/api/user/signin', function(req,res){
       return res.redirect('/ble');
       
     }
-    console.log(user.username);
-    /*user.comparePassword(req.body.password, function(err, isMatch){
-      if(err) throw err;
-      
-      if(!isMatch) return res.status(400).json({
-        message:'Mauvais mot de passe'
-      });
-      res.status(200).send('Connexion reussie !');
-    });*/
     bcrypt.compare(req.body.password, user.password, function(err,isMatch){
       if (err) throw err;
 
       if(!isMatch) return res.redirect('/ble');
-        //res.status(200).send('Connexion reussi');
-        res.render('profile', {name: req.user});
+        res.render('profile');
       
     });
     
@@ -160,6 +140,7 @@ app.post('/api/user/signin', function(req,res){
   });
   });
 });
+
 
 app.get('/ble', (req,res)=>{
   res.render('connexion', { message: 'Email ou Mot de passe incorrect !' });

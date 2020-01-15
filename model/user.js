@@ -13,6 +13,9 @@ const userSchema=mongoose.Schema({
         type: String,
         required: true,
         minlength: 8
+    },
+    username:{
+        type: String
     }
 });
 userSchema.plugin(uniqueValidator);
@@ -40,6 +43,8 @@ userSchema.methods.comparePassword=  function(candidatePassword, checkpassword){
         checkpassword(null, isMatch);
     });
 };
+
+
 
 const User= mongoose.model('User', userSchema);
 module.exports={User}
