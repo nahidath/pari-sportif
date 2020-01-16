@@ -1,0 +1,21 @@
+
+.reponse{
+    display: none;
+    transition: max-height 0.2s ease-out;
+    margin-top: 30px;
+    color: red;
+}
+.drop{
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.faq,h2{
+  text-align: center;
+    
+}
+h2{
+    text-decoration: underline black;
+}
